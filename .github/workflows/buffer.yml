@@ -1,0 +1,15 @@
+name: buffer-fill
+on:
+  schedule:
+    - cron: "23 * * * *"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  fill:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 cloud/talia_fill.py cloud/plan.json
+        env:
+          BUFFER_KEY: ${{ secrets.BUFFER_KEY }}
