@@ -130,7 +130,9 @@
     {
      "video": {
       "url": "https://faficka.github.io/tl-media/p/PIN01_the_fool.mp4",
-      "thumbnailUrl": "https://faficka.github.io/tl-media/p/PIN01_the_fool_cover.jpg"
+      "metadata": {
+       "thumbnailOffset": 10666
+      }
      }
     }
    ],
@@ -302,7 +304,9 @@
     {
      "video": {
       "url": "https://faficka.github.io/tl-media/p/PIN02_prince_of_wands.mp4",
-      "thumbnailUrl": "https://faficka.github.io/tl-media/p/PIN02_prince_of_wands_cover.jpg"
+      "metadata": {
+       "thumbnailOffset": 10100
+      }
      }
     }
    ],
@@ -474,7 +478,9 @@
     {
      "video": {
       "url": "https://faficka.github.io/tl-media/p/PIN03_nine_of_swords.mp4",
-      "thumbnailUrl": "https://faficka.github.io/tl-media/p/PIN03_nine_of_swords_cover.jpg"
+      "metadata": {
+       "thumbnailOffset": 10666
+      }
      }
     }
    ],
@@ -646,7 +652,9 @@
     {
      "video": {
       "url": "https://faficka.github.io/tl-media/p/PIN04_four_of_swords.mp4",
-      "thumbnailUrl": "https://faficka.github.io/tl-media/p/PIN04_four_of_swords_cover.jpg"
+      "metadata": {
+       "thumbnailOffset": 10700
+      }
      }
     }
    ],
@@ -818,7 +826,9 @@
     {
      "video": {
       "url": "https://faficka.github.io/tl-media/p/PIN05_princess_of_cups.mp4",
-      "thumbnailUrl": "https://faficka.github.io/tl-media/p/PIN05_princess_of_cups_cover.jpg"
+      "metadata": {
+       "thumbnailOffset": 10666
+      }
      }
     }
    ],
@@ -990,7 +1000,9 @@
     {
      "video": {
       "url": "https://faficka.github.io/tl-media/p/PIN06_queen_of_disks.mp4",
-      "thumbnailUrl": "https://faficka.github.io/tl-media/p/PIN06_queen_of_disks_cover.jpg"
+      "metadata": {
+       "thumbnailOffset": 10400
+      }
      }
     }
    ],
@@ -1162,7 +1174,9 @@
     {
      "video": {
       "url": "https://faficka.github.io/tl-media/p/PIN07_princess_of_swords.mp4",
-      "thumbnailUrl": "https://faficka.github.io/tl-media/p/PIN07_princess_of_swords_cover.jpg"
+      "metadata": {
+       "thumbnailOffset": 10700
+      }
      }
     }
    ],
@@ -1334,7 +1348,9 @@
     {
      "video": {
       "url": "https://faficka.github.io/tl-media/p/PIN08_prince_of_cups.mp4",
-      "thumbnailUrl": "https://faficka.github.io/tl-media/p/PIN08_prince_of_cups_cover.jpg"
+      "metadata": {
+       "thumbnailOffset": 10800
+      }
      }
     }
    ],
@@ -1506,7 +1522,9 @@
     {
      "video": {
       "url": "https://faficka.github.io/tl-media/p/PIN09_the_hermit.mp4",
-      "thumbnailUrl": "https://faficka.github.io/tl-media/p/PIN09_the_hermit_cover.jpg"
+      "metadata": {
+       "thumbnailOffset": 10400
+      }
      }
     }
    ],
@@ -1678,7 +1696,9 @@
     {
      "video": {
       "url": "https://faficka.github.io/tl-media/p/PIN10_the_chariot.mp4",
-      "thumbnailUrl": "https://faficka.github.io/tl-media/p/PIN10_the_chariot_cover.jpg"
+      "metadata": {
+       "thumbnailOffset": 10166
+      }
      }
     }
    ],
@@ -1850,7 +1870,9 @@
     {
      "video": {
       "url": "https://faficka.github.io/tl-media/p/PIN11_queen_of_wands.mp4",
-      "thumbnailUrl": "https://faficka.github.io/tl-media/p/PIN11_queen_of_wands_cover.jpg"
+      "metadata": {
+       "thumbnailOffset": 10600
+      }
      }
     }
    ],
@@ -2022,7 +2044,9 @@
     {
      "video": {
       "url": "https://faficka.github.io/tl-media/p/PIN12_knight_of_wands.mp4",
-      "thumbnailUrl": "https://faficka.github.io/tl-media/p/PIN12_knight_of_wands_cover.jpg"
+      "metadata": {
+       "thumbnailOffset": 10266
+      }
      }
     }
    ],
