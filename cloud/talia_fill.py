@@ -4,7 +4,8 @@ Buffer's free plan holds max 10 scheduled posts per channel. Every run creates t
 not in Buffer yet (matched by channel + due minute) while the channel has free slots. Past items are skipped.
 Note: a planned post deleted by hand in Buffer gets re-created - remove it from the plan instead
 (talia social/tools/talia_schedule_reels.py --export, then push).
-Usage: BUFFER_KEY=... python3 cloud/talia_fill.py cloud/plan.json
+Pinterest items (cloud/pinterest_plan.json, tools/talia_pinterest_plan.py) carry "board" = board name, resolved here.
+Usage: BUFFER_KEY=... python3 cloud/talia_fill.py cloud/plan.json [cloud/pinterest_plan.json ...]
 """
 import datetime as dt
 import json
@@ -44,12 +45,15 @@ def existing(start):
         after = r["data"]["posts"]["pageInfo"]["endCursor"]
 
 
-def main(plan_path):
-    plan = sorted(json.loads(Path(plan_path).read_text(encoding="utf-8")), key=lambda it: it["due"])
-    r = gql("query($o: OrganizationId!){ channels(input:{organizationId:$o}) { id service isDisconnected } }", {"o": ORG})
+def main(plan_paths):
+    plan = sorted((it for p in plan_paths for it in json.loads(Path(p).read_text(encoding="utf-8"))),
+                  key=lambda it: it["due"])
+    r = gql("""query($o: OrganizationId!){ channels(input:{organizationId:$o}) { id service isDisconnected
+               metadata { ... on PinterestMetadata { boards { serviceId name } } } } }""", {"o": ORG})
     if "errors" in r:
         sys.exit(f"Buffer error: {r['errors']}")
     chans = {c["service"]: c["id"] for c in r["data"]["channels"] if not c["isDisconnected"]}
+    boards = {b["name"]: b["serviceId"] for c in r["data"]["channels"] for b in (c.get("metadata") or {}).get("boards", [])}
     now = dt.datetime.now(dt.timezone.utc)
     soon = (now + dt.timedelta(minutes=10)).strftime("%Y-%m-%dT%H:%M")
     have = existing((now - dt.timedelta(hours=1)).strftime("%Y-%m-%dT%H:%M:%S.000Z"))
@@ -59,8 +63,11 @@ def main(plan_path):
         cid = chans.get(it["service"])
         if not cid or it["due"][:16] < soon or (cid, it["due"][:16]) in done or queued[cid] >= LIMIT:
             continue
+        post = {**it["post"], "channelId": cid}
+        if "board" in it:
+            post["metadata"] = {"pinterest": {**post["metadata"]["pinterest"], "boardServiceId": boards[it["board"]]}}
         r = gql("""mutation($i: CreatePostInput!){ createPost(input:$i){ ... on PostActionSuccess { post { id } }
-                   ... on MutationError { message } } }""", {"i": {**it["post"], "channelId": cid}})
+                   ... on MutationError { message } } }""", {"i": post})
         res = (r.get("data") or {}).get("createPost") or r
         if "post" in res:
             queued[cid] += 1
@@ -73,4 +80,4 @@ def main(plan_path):
 
 
 if __name__ == "__main__":
-    main(sys.argv[1])
+    main(sys.argv[1:])
