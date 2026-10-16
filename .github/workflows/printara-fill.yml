@@ -10,6 +10,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: python3 cloud/printara_fill.py cloud/printara_plan.json
+      - run: python3 cloud/printara_fill.py cloud/printara_plan.json cloud/printara_academy_plan.json
         env:
           BUFFER_KEY_PRINTARA: ${{ secrets.BUFFER_KEY_PRINTARA }}

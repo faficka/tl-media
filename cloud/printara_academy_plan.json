@@ -1,0 +1,147 @@
+[
+ {
+  "due": "2026-10-19T15:30:00.000Z",
+  "service": "pinterest",
+  "label": "academy create-a-3d-model",
+  "board": "3D Printed Home Decor STL Files",
+  "post": {
+   "schedulingType": "automatic",
+   "mode": "customScheduled",
+   "needsApproval": false,
+   "dueAt": "2026-10-19T15:30:00.000Z",
+   "text": "Free Printara Academy tutorial, no account needed to watch. Follow one colorful parrot statue from idea to printable 3D model: compare image variations, enable textures, check the shape in Matcap, set your print height, adjust filament colors, download STL or 3MF, inspect supports and check it in your slicer. A great 3d printing tutorial for beginners and Etsy makers. printara.co",
+   "assets": [
+    {
+     "video": {
+      "url": "https://files.printara.co/academy/tutorials-20260919/create-a-3d-model/en.mp4",
+      "metadata": {
+       "thumbnailOffset": 220000
+      }
+     }
+    }
+   ],
+   "metadata": {
+    "pinterest": {
+     "title": "How to Create a 3D Model for 3D Printing – Free Beginner Tutorial (STL & 3MF)",
+     "url": "https://printara.co/academy/create-a-3d-model/?utm_source=pinterest&utm_medium=social&utm_campaign=academy_create_a_3d_model"
+    }
+   }
+  }
+ },
+ {
+  "due": "2026-10-20T15:30:00.000Z",
+  "service": "pinterest",
+  "label": "academy laser-cut-headphone-stand",
+  "board": "Free Laser Cut Files, SVG and DXF",
+  "post": {
+   "schedulingType": "automatic",
+   "mode": "customScheduled",
+   "needsApproval": false,
+   "dueAt": "2026-10-20T15:30:00.000Z",
+   "text": "Free Printara Academy tutorial, no account needed to watch. Design a personalized laser cut headphone stand as a flat-pack kit: set 3 mm material on a 300 x 200 mm sheet, describe the engraving, review the six parts, compare plywood, oak and walnut previews, then download the cut sheet as SVG or DXF with cut, score and engrave colors. Test fit and kerf before cutting. printara.co",
+   "assets": [
+    {
+     "video": {
+      "url": "https://files.printara.co/academy/tutorials-20260919/laser-cut-headphone-stand/en.mp4",
+      "metadata": {
+       "thumbnailOffset": 112000
+      }
+     }
+    }
+   ],
+   "metadata": {
+    "pinterest": {
+     "title": "Laser Cut Headphone Stand – Free SVG & DXF Design Tutorial with Custom Engraving",
+     "url": "https://printara.co/academy/laser-cut-headphone-stand/?utm_source=pinterest&utm_medium=social&utm_campaign=academy_laser_cut_headphone_stand"
+    }
+   }
+  }
+ },
+ {
+  "due": "2026-10-21T15:30:00.000Z",
+  "service": "pinterest",
+  "label": "academy create-a-3d-ornament",
+  "board": "3D Printed Gifts",
+  "post": {
+   "schedulingType": "automatic",
+   "mode": "customScheduled",
+   "needsApproval": false,
+   "dueAt": "2026-10-21T15:30:00.000Z",
+   "text": "Free Printara Academy tutorial, no account needed to watch. Turn a flat image into a multicolor 3D relief souvenir: generate a townscape, remove the background border, choose 4 to 16 filament colors, set base, relief height and bend, create a fridge magnet product photo, then export a multicolor 3MF and check it in Bambu Studio. A fun 3d printed gift idea for Etsy makers. printara.co",
+   "assets": [
+    {
+     "video": {
+      "url": "https://files.printara.co/academy/tutorials-20260919/create-a-3d-ornament/en.mp4",
+      "metadata": {
+       "thumbnailOffset": 140000
+      }
+     }
+    }
+   ],
+   "metadata": {
+    "pinterest": {
+     "title": "How to Turn a Photo into a 3D Printed Souvenir Magnet – Free Multicolor Tutorial",
+     "url": "https://printara.co/academy/create-a-3d-ornament/?utm_source=pinterest&utm_medium=social&utm_campaign=academy_create_a_3d_ornament"
+    }
+   }
+  }
+ },
+ {
+  "due": "2026-10-22T15:30:00.000Z",
+  "service": "pinterest",
+  "label": "academy sell-your-models",
+  "board": "Things to 3D Print: Useful 3D Printing Ideas",
+  "post": {
+   "schedulingType": "automatic",
+   "mode": "customScheduled",
+   "needsApproval": false,
+   "dueAt": "2026-10-22T15:30:00.000Z",
+   "text": "Free Printara Academy tutorial, no account needed to watch. See how to turn a 3D model into a digital product listing: choose your sales channels, generate a first listing draft, check the title, price, tags and included file formats (STL, GLB, OBJ), promote it with a Pinterest pin and finish the draft inside Etsy. Practical for Etsy makers selling STL files. printara.co",
+   "assets": [
+    {
+     "video": {
+      "url": "https://files.printara.co/academy/tutorials-20260919/sell-your-models/en.mp4",
+      "metadata": {
+       "thumbnailOffset": 120000
+      }
+     }
+    }
+   ],
+   "metadata": {
+    "pinterest": {
+     "title": "How to Sell 3D Printing Files on Etsy – Free STL Listing Tutorial",
+     "url": "https://printara.co/academy/sell-your-models/?utm_source=pinterest&utm_medium=social&utm_campaign=academy_sell_your_models"
+    }
+   }
+  }
+ },
+ {
+  "due": "2026-10-23T15:30:00.000Z",
+  "service": "pinterest",
+  "label": "academy segment-your-model",
+  "board": "Things to 3D Print: Useful 3D Printing Ideas",
+  "post": {
+   "schedulingType": "automatic",
+   "mode": "customScheduled",
+   "needsApproval": false,
+   "dueAt": "2026-10-23T15:30:00.000Z",
+   "text": "Free Printara Academy tutorial, no account needed to watch. Turn an alien figurine into separate printable parts: Shift-click to merge pieces into head, body and base, add resin pins with matching sockets, set the print height, inspect the joints and save the prepared assembly to your Library before listing it. Useful for resin printing and multi-part miniatures. printara.co",
+   "assets": [
+    {
+     "video": {
+      "url": "https://files.printara.co/academy/tutorials-20260919/segment-your-model/en.mp4",
+      "metadata": {
+       "thumbnailOffset": 20000
+      }
+     }
+    }
+   ],
+   "metadata": {
+    "pinterest": {
+     "title": "How to Split a Resin Miniature into Parts with Pin Joints – Free 3D Printing Tutorial",
+     "url": "https://printara.co/academy/segment-your-model/?utm_source=pinterest&utm_medium=social&utm_campaign=academy_segment_your_model"
+    }
+   }
+  }
+ }
+]
