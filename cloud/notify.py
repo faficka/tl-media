@@ -101,6 +101,31 @@ def send(text, dry):
                            data=data, timeout=60)
 
 
+def reminders(state, now, dry):
+    """Manual-post reminders from cloud/tg_reminders.json ([{id, at (UTC ISO), html}], written by
+    talia social/tools/talia_telegram.py). Each one is sent once when due; older than 6 h are dropped silently."""
+    path = STATE.parent / "tg_reminders.json"
+    if not path.exists():
+        return
+    sent = state.setdefault("reminders", {})
+    for r in json.loads(path.read_text(encoding="utf-8")):
+        at = dt.datetime.fromisoformat(r["at"].replace("Z", "+00:00"))
+        if r["id"] in sent or at > now:
+            continue
+        if now - at < dt.timedelta(hours=6):
+            if dry:
+                print("--- reminder")
+                print(r["html"])
+            else:
+                data = urllib.parse.urlencode({"chat_id": os.environ["TELEGRAM_CHAT"], "text": r["html"][:4000],
+                                               "parse_mode": "HTML", "disable_web_page_preview": "true"}).encode()
+                urllib.request.urlopen("https://api.telegram.org/bot" + os.environ["TELEGRAM_TOKEN"] + "/sendMessage",
+                                       data=data, timeout=60)
+        sent[r["id"]] = r["at"]
+    cutoff = (now - dt.timedelta(days=3)).isoformat()
+    state["reminders"] = {k: v for k, v in sent.items() if v >= cutoff[:16]}
+
+
 def main(dry):
     state = json.loads(STATE.read_text(encoding="utf-8")) if STATE.exists() else {}
     first_run = not state
@@ -117,6 +142,7 @@ def main(dry):
         if not first_run:  # first run only records what already happened, no flood of old posts
             send(text, dry)
         done[p["id"]] = p["dueAt"]
+    reminders(state, now, dry)
     today = now.astimezone(PRAGUE)
     if today.hour >= 8 and state.get("summary") != today.date().isoformat():
         send(summary(found, today.date()), dry)
