@@ -27,5 +27,34 @@
     }
    }
   }
+ },
+ {
+  "due": "2026-10-17T17:00:00.000Z",
+  "service": "pinterest",
+  "label": "2026-10-17 12:00 ET carousel 2027 Sagittarius (notification) pin",
+  "board": "Tarot Reading",
+  "post": {
+   "schedulingType": "automatic",
+   "mode": "customScheduled",
+   "needsApproval": false,
+   "dueAt": "2026-10-17T17:00:00.000Z",
+   "text": "Sagittarius 2027 horoscope and tarot reading: the year your world gets bigger. Your ruling planet Jupiter spends the first half of 2027 in fellow fire sign Leo, lighting up travel, learning and big adventures. Love, money, career, health and friendship predictions for Sagittarius in 2027, plus your tarot card of the year: The World. Save this Sagittarius 2027 forecast for later.",
+   "assets": [
+    {
+     "image": {
+      "url": "https://faficka.github.io/tl-media/c/2027_09_sagittarius_01.jpg",
+      "metadata": {
+       "altText": "Sagittarius 2027 horoscope and tarot destiny timeline carousel cover"
+      }
+     }
+    }
+   ],
+   "metadata": {
+    "pinterest": {
+     "title": "Sagittarius 2027 Horoscope: Love, Money and Career Predictions",
+     "url": ""
+    }
+   }
+  }
  }
 ]
