@@ -85,5 +85,93 @@
     }
    }
   }
+ },
+ {
+  "due": "2026-10-20T20:00:00.000Z",
+  "service": "instagram",
+  "label": "2026-10-20 16:00 ET video B_angel_numbers_love (notification)",
+  "post": {
+   "schedulingType": "notification",
+   "mode": "customScheduled",
+   "needsApproval": false,
+   "dueAt": "2026-10-20T20:00:00.000Z",
+   "text": "Angel numbers in love, no sugar-coating 😇 Save this for the next time a number keeps following you. Which one is showing up for you right now? 👇\n\n#angelnumbers #lovereading #twinflame #soulmate #1111 #tarot #manifestlove",
+   "assets": [
+    {
+     "video": {
+      "url": "https://faficka.github.io/tl-media/v/B_angel_numbers_love.mp4"
+     }
+    }
+   ],
+   "metadata": {
+    "instagram": {
+     "type": "reel",
+     "shouldShareToFeed": true
+    }
+   }
+  }
+ },
+ {
+  "due": "2026-10-20T20:00:00.000Z",
+  "service": "tiktok",
+  "label": "2026-10-20 16:00 ET video B_angel_numbers_love (notification)",
+  "post": {
+   "schedulingType": "notification",
+   "mode": "customScheduled",
+   "needsApproval": false,
+   "dueAt": "2026-10-20T20:00:00.000Z",
+   "text": "Angel numbers in love, no sugar-coating 😇 Save this for the next time a number keeps following you. Which one is showing up for you right now? 👇\n\n#angelnumbers #lovereading #twinflame #soulmate #1111 #tarot #manifestlove",
+   "assets": [
+    {
+     "video": {
+      "url": "https://faficka.github.io/tl-media/v/B_angel_numbers_love.mp4"
+     }
+    }
+   ]
+  }
+ },
+ {
+  "due": "2026-10-26T20:00:00.000Z",
+  "service": "instagram",
+  "label": "2026-10-26 16:00 ET video A_angel_numbers (notification)",
+  "post": {
+   "schedulingType": "notification",
+   "mode": "customScheduled",
+   "needsApproval": false,
+   "dueAt": "2026-10-26T20:00:00.000Z",
+   "text": "The universe keeps sending you numbers for a reason ✨ Here's what each angel number means. Which one do you keep seeing? 👇\n\n#angelnumbers #111 #1111 #spirituality #manifestation #divineguidance #tarot",
+   "assets": [
+    {
+     "video": {
+      "url": "https://faficka.github.io/tl-media/v/A_angel_numbers.mp4"
+     }
+    }
+   ],
+   "metadata": {
+    "instagram": {
+     "type": "reel",
+     "shouldShareToFeed": true
+    }
+   }
+  }
+ },
+ {
+  "due": "2026-10-26T20:00:00.000Z",
+  "service": "tiktok",
+  "label": "2026-10-26 16:00 ET video A_angel_numbers (notification)",
+  "post": {
+   "schedulingType": "notification",
+   "mode": "customScheduled",
+   "needsApproval": false,
+   "dueAt": "2026-10-26T20:00:00.000Z",
+   "text": "The universe keeps sending you numbers for a reason ✨ Here's what each angel number means. Which one do you keep seeing? 👇\n\n#angelnumbers #111 #1111 #spirituality #manifestation #divineguidance #tarot",
+   "assets": [
+    {
+     "video": {
+      "url": "https://faficka.github.io/tl-media/v/A_angel_numbers.mp4"
+     }
+    }
+   ]
+  }
  }
 ]
