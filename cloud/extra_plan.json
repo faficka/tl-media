@@ -56,5 +56,34 @@
     }
    }
   }
+ },
+ {
+  "due": "2026-10-19T17:00:00.000Z",
+  "service": "pinterest",
+  "label": "2026-10-19 12:00 ET carousel 2027 Capricorn (notification) pin",
+  "board": "Tarot Reading",
+  "post": {
+   "schedulingType": "automatic",
+   "mode": "customScheduled",
+   "needsApproval": false,
+   "dueAt": "2026-10-19T17:00:00.000Z",
+   "text": "Capricorn 2027 horoscope and tarot reading: the year home finally feels like yours. Saturn, your ruler, moves through your home and family zone in 2027. You are building foundations that will hold for years. Love, money, career, health and friendship predictions for Capricorn in 2027, plus your tarot card of the year: Ten of Pentacles. Save this Capricorn 2027 forecast for later.",
+   "assets": [
+    {
+     "image": {
+      "url": "https://faficka.github.io/tl-media/c/2027_10_capricorn_01.jpg",
+      "metadata": {
+       "altText": "Capricorn 2027 horoscope and tarot destiny timeline carousel cover"
+      }
+     }
+    }
+   ],
+   "metadata": {
+    "pinterest": {
+     "title": "Capricorn 2027 Horoscope: Love, Money and Career Predictions",
+     "url": ""
+    }
+   }
+  }
  }
 ]
