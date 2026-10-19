@@ -131,6 +131,226 @@
   }
  },
  {
+  "due": "2026-10-21T20:00:00.000Z",
+  "service": "instagram",
+  "label": "2026-10-21 16:00 ET video T01_scorpio_cancer_pisces (notification)",
+  "post": {
+   "schedulingType": "notification",
+   "mode": "customScheduled",
+   "needsApproval": false,
+   "dueAt": "2026-10-21T20:00:00.000Z",
+   "text": "If you are a Scorpio, Cancer or Pisces... Someone from your past is about to reach out. Don't answer too fast.\n\nType YES 👇\n\n#tarot #lovereading #zodiac #scorpio #cancer #pisces #lovetarot",
+   "assets": [
+    {
+     "video": {
+      "url": "https://faficka.github.io/tl-media/v/T01_scorpio_cancer_pisces.mp4"
+     }
+    }
+   ],
+   "metadata": {
+    "instagram": {
+     "type": "reel",
+     "shouldShareToFeed": true
+    }
+   }
+  }
+ },
+ {
+  "due": "2026-10-21T20:00:00.000Z",
+  "service": "tiktok",
+  "label": "2026-10-21 16:00 ET video T01_scorpio_cancer_pisces (notification)",
+  "post": {
+   "schedulingType": "notification",
+   "mode": "customScheduled",
+   "needsApproval": false,
+   "dueAt": "2026-10-21T20:00:00.000Z",
+   "text": "If you are a Scorpio, Cancer or Pisces... Someone from your past is about to reach out. Don't answer too fast.\n\nType YES 👇\n\n#tarot #lovereading #zodiac #scorpio #cancer #pisces #lovetarot",
+   "assets": [
+    {
+     "video": {
+      "url": "https://faficka.github.io/tl-media/v/T01_scorpio_cancer_pisces.mp4"
+     }
+    }
+   ]
+  }
+ },
+ {
+  "due": "2026-10-22T20:00:00.000Z",
+  "service": "instagram",
+  "label": "2026-10-22 16:00 ET video T02_aries_leo_sagittarius (notification)",
+  "post": {
+   "schedulingType": "notification",
+   "mode": "customScheduled",
+   "needsApproval": false,
+   "dueAt": "2026-10-22T20:00:00.000Z",
+   "text": "If you are an Aries, Leo or Sagittarius... The person you're pretending not to miss is thinking about you right now.\n\nType YES 👇\n\n#tarot #lovereading #zodiac #aries #leo #sagittarius #lovetarot",
+   "assets": [
+    {
+     "video": {
+      "url": "https://faficka.github.io/tl-media/v/T02_aries_leo_sagittarius.mp4"
+     }
+    }
+   ],
+   "metadata": {
+    "instagram": {
+     "type": "reel",
+     "shouldShareToFeed": true
+    }
+   }
+  }
+ },
+ {
+  "due": "2026-10-22T20:00:00.000Z",
+  "service": "tiktok",
+  "label": "2026-10-22 16:00 ET video T02_aries_leo_sagittarius (notification)",
+  "post": {
+   "schedulingType": "notification",
+   "mode": "customScheduled",
+   "needsApproval": false,
+   "dueAt": "2026-10-22T20:00:00.000Z",
+   "text": "If you are an Aries, Leo or Sagittarius... The person you're pretending not to miss is thinking about you right now.\n\nType YES 👇\n\n#tarot #lovereading #zodiac #aries #leo #sagittarius #lovetarot",
+   "assets": [
+    {
+     "video": {
+      "url": "https://faficka.github.io/tl-media/v/T02_aries_leo_sagittarius.mp4"
+     }
+    }
+   ]
+  }
+ },
+ {
+  "due": "2026-10-23T20:00:00.000Z",
+  "service": "instagram",
+  "label": "2026-10-23 16:00 ET video T03_taurus_virgo_capricorn (notification)",
+  "post": {
+   "schedulingType": "notification",
+   "mode": "customScheduled",
+   "needsApproval": false,
+   "dueAt": "2026-10-23T20:00:00.000Z",
+   "text": "If you are a Taurus, Virgo or Capricorn... Stop waiting for an apology that isn't coming. Real love is on its way.\n\nType YES 👇\n\n#tarot #lovereading #zodiac #taurus #virgo #capricorn #lovetarot",
+   "assets": [
+    {
+     "video": {
+      "url": "https://faficka.github.io/tl-media/v/T03_taurus_virgo_capricorn.mp4"
+     }
+    }
+   ],
+   "metadata": {
+    "instagram": {
+     "type": "reel",
+     "shouldShareToFeed": true
+    }
+   }
+  }
+ },
+ {
+  "due": "2026-10-23T20:00:00.000Z",
+  "service": "tiktok",
+  "label": "2026-10-23 16:00 ET video T03_taurus_virgo_capricorn (notification)",
+  "post": {
+   "schedulingType": "notification",
+   "mode": "customScheduled",
+   "needsApproval": false,
+   "dueAt": "2026-10-23T20:00:00.000Z",
+   "text": "If you are a Taurus, Virgo or Capricorn... Stop waiting for an apology that isn't coming. Real love is on its way.\n\nType YES 👇\n\n#tarot #lovereading #zodiac #taurus #virgo #capricorn #lovetarot",
+   "assets": [
+    {
+     "video": {
+      "url": "https://faficka.github.io/tl-media/v/T03_taurus_virgo_capricorn.mp4"
+     }
+    }
+   ]
+  }
+ },
+ {
+  "due": "2026-10-24T20:00:00.000Z",
+  "service": "instagram",
+  "label": "2026-10-24 16:00 ET video T04_gemini_libra_aquarius (notification)",
+  "post": {
+   "schedulingType": "notification",
+   "mode": "customScheduled",
+   "needsApproval": false,
+   "dueAt": "2026-10-24T20:00:00.000Z",
+   "text": "If you are a Gemini, Libra or Aquarius... Someone is falling for you and is too scared to say it.\n\nType YES 👇\n\n#tarot #lovereading #zodiac #gemini #libra #aquarius #lovetarot",
+   "assets": [
+    {
+     "video": {
+      "url": "https://faficka.github.io/tl-media/v/T04_gemini_libra_aquarius.mp4"
+     }
+    }
+   ],
+   "metadata": {
+    "instagram": {
+     "type": "reel",
+     "shouldShareToFeed": true
+    }
+   }
+  }
+ },
+ {
+  "due": "2026-10-24T20:00:00.000Z",
+  "service": "tiktok",
+  "label": "2026-10-24 16:00 ET video T04_gemini_libra_aquarius (notification)",
+  "post": {
+   "schedulingType": "notification",
+   "mode": "customScheduled",
+   "needsApproval": false,
+   "dueAt": "2026-10-24T20:00:00.000Z",
+   "text": "If you are a Gemini, Libra or Aquarius... Someone is falling for you and is too scared to say it.\n\nType YES 👇\n\n#tarot #lovereading #zodiac #gemini #libra #aquarius #lovetarot",
+   "assets": [
+    {
+     "video": {
+      "url": "https://faficka.github.io/tl-media/v/T04_gemini_libra_aquarius.mp4"
+     }
+    }
+   ]
+  }
+ },
+ {
+  "due": "2026-10-25T20:00:00.000Z",
+  "service": "instagram",
+  "label": "2026-10-25 16:00 ET video T05_cancer_capricorn_libra (notification)",
+  "post": {
+   "schedulingType": "notification",
+   "mode": "customScheduled",
+   "needsApproval": false,
+   "dueAt": "2026-10-25T20:00:00.000Z",
+   "text": "If you are a Cancer, Capricorn or Libra... The love you gave up on isn't done with you yet.\n\nType YES 👇\n\n#tarot #lovereading #zodiac #cancer #capricorn #libra #lovetarot",
+   "assets": [
+    {
+     "video": {
+      "url": "https://faficka.github.io/tl-media/v/T05_cancer_capricorn_libra.mp4"
+     }
+    }
+   ],
+   "metadata": {
+    "instagram": {
+     "type": "reel",
+     "shouldShareToFeed": true
+    }
+   }
+  }
+ },
+ {
+  "due": "2026-10-25T20:00:00.000Z",
+  "service": "tiktok",
+  "label": "2026-10-25 16:00 ET video T05_cancer_capricorn_libra (notification)",
+  "post": {
+   "schedulingType": "notification",
+   "mode": "customScheduled",
+   "needsApproval": false,
+   "dueAt": "2026-10-25T20:00:00.000Z",
+   "text": "If you are a Cancer, Capricorn or Libra... The love you gave up on isn't done with you yet.\n\nType YES 👇\n\n#tarot #lovereading #zodiac #cancer #capricorn #libra #lovetarot",
+   "assets": [
+    {
+     "video": {
+      "url": "https://faficka.github.io/tl-media/v/T05_cancer_capricorn_libra.mp4"
+     }
+    }
+   ]
+  }
+ },
+ {
   "due": "2026-10-26T20:00:00.000Z",
   "service": "instagram",
   "label": "2026-10-26 16:00 ET video A_angel_numbers (notification)",
@@ -169,6 +389,226 @@
     {
      "video": {
       "url": "https://faficka.github.io/tl-media/v/A_angel_numbers.mp4"
+     }
+    }
+   ]
+  }
+ },
+ {
+  "due": "2026-10-26T23:30:00.000Z",
+  "service": "instagram",
+  "label": "2026-10-26 19:30 ET video M01_love_magnet_v2",
+  "post": {
+   "schedulingType": "automatic",
+   "mode": "customScheduled",
+   "needsApproval": false,
+   "dueAt": "2026-10-26T23:30:00.000Z",
+   "text": "Listen with headphones and let it loop 3 times. 🎧\n639 Hz to open your heart and let love find you.\nComment ‘I claim’ to claim this energy 🧲❤️\n\n#639hz #lovemagnet #manifestlove #lawofattraction #frequency #soulmate #affirmations",
+   "assets": [
+    {
+     "video": {
+      "url": "https://faficka.github.io/tl-media/v/M01_love_magnet_v2.mp4"
+     }
+    }
+   ],
+   "metadata": {
+    "instagram": {
+     "type": "reel",
+     "shouldShareToFeed": true
+    }
+   }
+  }
+ },
+ {
+  "due": "2026-10-26T23:30:00.000Z",
+  "service": "tiktok",
+  "label": "2026-10-26 19:30 ET video M01_love_magnet_v2",
+  "post": {
+   "schedulingType": "automatic",
+   "mode": "customScheduled",
+   "needsApproval": false,
+   "dueAt": "2026-10-26T23:30:00.000Z",
+   "text": "Listen with headphones and let it loop 3 times. 🎧\n639 Hz to open your heart and let love find you.\nComment ‘I claim’ to claim this energy 🧲❤️\n\n#639hz #lovemagnet #manifestlove #lawofattraction #frequency #soulmate #affirmations",
+   "assets": [
+    {
+     "video": {
+      "url": "https://faficka.github.io/tl-media/v/M01_love_magnet_v2.mp4"
+     }
+    }
+   ]
+  }
+ },
+ {
+  "due": "2026-10-27T20:00:00.000Z",
+  "service": "instagram",
+  "label": "2026-10-27 16:00 ET video T06_pisces_taurus_leo (notification)",
+  "post": {
+   "schedulingType": "notification",
+   "mode": "customScheduled",
+   "needsApproval": false,
+   "dueAt": "2026-10-27T20:00:00.000Z",
+   "text": "If you are a Pisces, Taurus or Leo... Your next relationship will look nothing like your last one. Thank God.\n\nType YES 👇\n\n#tarot #lovereading #zodiac #pisces #taurus #leo #lovetarot",
+   "assets": [
+    {
+     "video": {
+      "url": "https://faficka.github.io/tl-media/v/T06_pisces_taurus_leo.mp4"
+     }
+    }
+   ],
+   "metadata": {
+    "instagram": {
+     "type": "reel",
+     "shouldShareToFeed": true
+    }
+   }
+  }
+ },
+ {
+  "due": "2026-10-27T20:00:00.000Z",
+  "service": "tiktok",
+  "label": "2026-10-27 16:00 ET video T06_pisces_taurus_leo (notification)",
+  "post": {
+   "schedulingType": "notification",
+   "mode": "customScheduled",
+   "needsApproval": false,
+   "dueAt": "2026-10-27T20:00:00.000Z",
+   "text": "If you are a Pisces, Taurus or Leo... Your next relationship will look nothing like your last one. Thank God.\n\nType YES 👇\n\n#tarot #lovereading #zodiac #pisces #taurus #leo #lovetarot",
+   "assets": [
+    {
+     "video": {
+      "url": "https://faficka.github.io/tl-media/v/T06_pisces_taurus_leo.mp4"
+     }
+    }
+   ]
+  }
+ },
+ {
+  "due": "2026-10-27T23:30:00.000Z",
+  "service": "instagram",
+  "label": "2026-10-27 19:30 ET video M02_money_magnet_v2",
+  "post": {
+   "schedulingType": "automatic",
+   "mode": "customScheduled",
+   "needsApproval": false,
+   "dueAt": "2026-10-27T23:30:00.000Z",
+   "text": "Listen with headphones and let it loop 3 times. 🎧\n888 Hz for abundance that flows to you with ease.\nComment ‘I claim’ to claim this energy 🧲💰\n\n#888hz #moneymagnet #abundance #manifestation #lawofattraction #frequency #wealthaffirmations",
+   "assets": [
+    {
+     "video": {
+      "url": "https://faficka.github.io/tl-media/v/M02_money_magnet_v2.mp4"
+     }
+    }
+   ],
+   "metadata": {
+    "instagram": {
+     "type": "reel",
+     "shouldShareToFeed": true
+    }
+   }
+  }
+ },
+ {
+  "due": "2026-10-27T23:30:00.000Z",
+  "service": "tiktok",
+  "label": "2026-10-27 19:30 ET video M02_money_magnet_v2",
+  "post": {
+   "schedulingType": "automatic",
+   "mode": "customScheduled",
+   "needsApproval": false,
+   "dueAt": "2026-10-27T23:30:00.000Z",
+   "text": "Listen with headphones and let it loop 3 times. 🎧\n888 Hz for abundance that flows to you with ease.\nComment ‘I claim’ to claim this energy 🧲💰\n\n#888hz #moneymagnet #abundance #manifestation #lawofattraction #frequency #wealthaffirmations",
+   "assets": [
+    {
+     "video": {
+      "url": "https://faficka.github.io/tl-media/v/M02_money_magnet_v2.mp4"
+     }
+    }
+   ]
+  }
+ },
+ {
+  "due": "2026-10-28T23:30:00.000Z",
+  "service": "instagram",
+  "label": "2026-10-28 19:30 ET video M03_soulmate_magnet_v2",
+  "post": {
+   "schedulingType": "automatic",
+   "mode": "customScheduled",
+   "needsApproval": false,
+   "dueAt": "2026-10-28T23:30:00.000Z",
+   "text": "Listen with headphones and let it loop 3 times. 🎧\n528 Hz to align with your person in divine timing.\nComment ‘I claim’ to claim this energy 🧲💜\n\n#528hz #soulmate #twinflame #manifestlove #lawofattraction #frequency #1111",
+   "assets": [
+    {
+     "video": {
+      "url": "https://faficka.github.io/tl-media/v/M03_soulmate_magnet_v2.mp4"
+     }
+    }
+   ],
+   "metadata": {
+    "instagram": {
+     "type": "reel",
+     "shouldShareToFeed": true
+    }
+   }
+  }
+ },
+ {
+  "due": "2026-10-28T23:30:00.000Z",
+  "service": "tiktok",
+  "label": "2026-10-28 19:30 ET video M03_soulmate_magnet_v2",
+  "post": {
+   "schedulingType": "automatic",
+   "mode": "customScheduled",
+   "needsApproval": false,
+   "dueAt": "2026-10-28T23:30:00.000Z",
+   "text": "Listen with headphones and let it loop 3 times. 🎧\n528 Hz to align with your person in divine timing.\nComment ‘I claim’ to claim this energy 🧲💜\n\n#528hz #soulmate #twinflame #manifestlove #lawofattraction #frequency #1111",
+   "assets": [
+    {
+     "video": {
+      "url": "https://faficka.github.io/tl-media/v/M03_soulmate_magnet_v2.mp4"
+     }
+    }
+   ]
+  }
+ },
+ {
+  "due": "2026-10-29T23:30:00.000Z",
+  "service": "instagram",
+  "label": "2026-10-29 19:30 ET video M04_luck_magnet_v2",
+  "post": {
+   "schedulingType": "automatic",
+   "mode": "customScheduled",
+   "needsApproval": false,
+   "dueAt": "2026-10-29T23:30:00.000Z",
+   "text": "Listen with headphones and let it loop 3 times. 🎧\n777 Hz to step into luck, alignment and open doors.\nComment ‘I claim’ to claim this energy 🧲🍀\n\n#777hz #luckmagnet #luckyme #manifestation #lawofattraction #frequency #alignment",
+   "assets": [
+    {
+     "video": {
+      "url": "https://faficka.github.io/tl-media/v/M04_luck_magnet_v2.mp4"
+     }
+    }
+   ],
+   "metadata": {
+    "instagram": {
+     "type": "reel",
+     "shouldShareToFeed": true
+    }
+   }
+  }
+ },
+ {
+  "due": "2026-10-29T23:30:00.000Z",
+  "service": "tiktok",
+  "label": "2026-10-29 19:30 ET video M04_luck_magnet_v2",
+  "post": {
+   "schedulingType": "automatic",
+   "mode": "customScheduled",
+   "needsApproval": false,
+   "dueAt": "2026-10-29T23:30:00.000Z",
+   "text": "Listen with headphones and let it loop 3 times. 🎧\n777 Hz to step into luck, alignment and open doors.\nComment ‘I claim’ to claim this energy 🧲🍀\n\n#777hz #luckmagnet #luckyme #manifestation #lawofattraction #frequency #alignment",
+   "assets": [
+    {
+     "video": {
+      "url": "https://faficka.github.io/tl-media/v/M04_luck_magnet_v2.mp4"
      }
     }
    ]
