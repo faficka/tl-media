@@ -87,6 +87,35 @@
   }
  },
  {
+  "due": "2026-10-20T17:00:00.000Z",
+  "service": "pinterest",
+  "label": "2026-10-20 12:00 ET carousel 2027 Aquarius (notification) pin",
+  "board": "Tarot Reading",
+  "post": {
+   "schedulingType": "automatic",
+   "mode": "customScheduled",
+   "needsApproval": false,
+   "dueAt": "2026-10-20T17:00:00.000Z",
+   "text": "Aquarius 2027 horoscope and tarot reading: the year you leave people behind. Not everyone who knew the old you gets a ticket to the new one. Pluto rewires you from the inside and a solar eclipse in Aquarius on February 6 starts a brand new chapter. Love, money, career, health and friendship predictions for Aquarius in 2027, plus your tarot card of the year: The Star. Save this Aquarius 2027 forecast for later.",
+   "assets": [
+    {
+     "image": {
+      "url": "https://faficka.github.io/tl-media/c/2027_11_aquarius_01.jpg",
+      "metadata": {
+       "altText": "Aquarius 2027 horoscope and tarot destiny timeline carousel cover"
+      }
+     }
+    }
+   ],
+   "metadata": {
+    "pinterest": {
+     "title": "Aquarius 2027 Horoscope: Love, Money and Career Predictions",
+     "url": ""
+    }
+   }
+  }
+ },
+ {
   "due": "2026-10-20T20:00:00.000Z",
   "service": "instagram",
   "label": "2026-10-20 16:00 ET video B_angel_numbers_love (notification)",
