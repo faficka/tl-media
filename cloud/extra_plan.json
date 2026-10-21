@@ -160,6 +160,35 @@
   }
  },
  {
+  "due": "2026-10-21T17:00:00.000Z",
+  "service": "pinterest",
+  "label": "2026-10-21 12:00 ET carousel 2027 Pisces (notification) pin",
+  "board": "Tarot Reading",
+  "post": {
+   "schedulingType": "automatic",
+   "mode": "customScheduled",
+   "needsApproval": false,
+   "dueAt": "2026-10-21T17:00:00.000Z",
+   "text": "Pisces 2027 horoscope and tarot reading: the year you stop saving people who never saved you. Saturn and Neptune have left Pisces and the years of carrying everyone else's weight are over. Love, money, career, health and friendship predictions for Pisces in 2027, plus your tarot card of the year: the Eight of Cups. Save this Pisces 2027 forecast for later.",
+   "assets": [
+    {
+     "image": {
+      "url": "https://faficka.github.io/tl-media/c/2027_12_pisces_01.jpg",
+      "metadata": {
+       "altText": "Pisces 2027 horoscope and tarot destiny timeline carousel cover"
+      }
+     }
+    }
+   ],
+   "metadata": {
+    "pinterest": {
+     "title": "Pisces 2027 Horoscope: Love, Money and Career Predictions",
+     "url": ""
+    }
+   }
+  }
+ },
+ {
   "due": "2026-10-21T20:00:00.000Z",
   "service": "instagram",
   "label": "2026-10-21 16:00 ET video T01_scorpio_cancer_pisces (notification)",
