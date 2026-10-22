@@ -233,6 +233,50 @@
   }
  },
  {
+  "due": "2026-10-22T21:00:00.000Z",
+  "service": "instagram",
+  "label": "2026-10-22 17:00 ET video B_angel_numbers_love (automatic)",
+  "post": {
+   "schedulingType": "automatic",
+   "mode": "customScheduled",
+   "needsApproval": false,
+   "dueAt": "2026-10-22T21:00:00.000Z",
+   "text": "Angel numbers in love, no sugar-coating 😇 Save this for the next time a number keeps following you. Which one is showing up for you right now? 👇\n\n#angelnumbers #lovereading #twinflame #soulmate #1111 #tarot #manifestlove",
+   "assets": [
+    {
+     "video": {
+      "url": "https://faficka.github.io/tl-media/v/B_angel_numbers_love.mp4"
+     }
+    }
+   ],
+   "metadata": {
+    "instagram": {
+     "type": "reel",
+     "shouldShareToFeed": true
+    }
+   }
+  }
+ },
+ {
+  "due": "2026-10-22T21:00:00.000Z",
+  "service": "tiktok",
+  "label": "2026-10-22 17:00 ET video B_angel_numbers_love (automatic)",
+  "post": {
+   "schedulingType": "automatic",
+   "mode": "customScheduled",
+   "needsApproval": false,
+   "dueAt": "2026-10-22T21:00:00.000Z",
+   "text": "Angel numbers in love, no sugar-coating 😇 Save this for the next time a number keeps following you. Which one is showing up for you right now? 👇\n\n#angelnumbers #lovereading #twinflame #soulmate #1111 #tarot #manifestlove",
+   "assets": [
+    {
+     "video": {
+      "url": "https://faficka.github.io/tl-media/v/B_angel_numbers_love.mp4"
+     }
+    }
+   ]
+  }
+ },
+ {
   "due": "2026-10-23T20:00:00.000Z",
   "service": "instagram",
   "label": "2026-10-23 16:00 ET video T03_taurus_virgo_capricorn (automatic)",
@@ -277,6 +321,50 @@
   }
  },
  {
+  "due": "2026-10-23T21:00:00.000Z",
+  "service": "instagram",
+  "label": "2026-10-23 17:00 ET video T01_scorpio_cancer_pisces_v2 (automatic)",
+  "post": {
+   "schedulingType": "automatic",
+   "mode": "customScheduled",
+   "needsApproval": false,
+   "dueAt": "2026-10-23T21:00:00.000Z",
+   "text": "If you are a Scorpio, Cancer or Pisces... Someone from your past is about to reach out. Don't answer too fast.\n\nVenus (love) is retrograde and Mercury (messages) turns retrograde in Scorpio on Oct 24, the classic \"ex comes back\" transit, and the water signs feel it first 🌊\n\nType YES 👇\n\n#tarot #lovereading #zodiac #scorpio #cancer #pisces #lovetarot #mercuryretrograde #venusretrograde",
+   "assets": [
+    {
+     "video": {
+      "url": "https://faficka.github.io/tl-media/v/T01_scorpio_cancer_pisces_v2.mp4"
+     }
+    }
+   ],
+   "metadata": {
+    "instagram": {
+     "type": "reel",
+     "shouldShareToFeed": true
+    }
+   }
+  }
+ },
+ {
+  "due": "2026-10-23T21:00:00.000Z",
+  "service": "tiktok",
+  "label": "2026-10-23 17:00 ET video T01_scorpio_cancer_pisces_v2 (automatic)",
+  "post": {
+   "schedulingType": "automatic",
+   "mode": "customScheduled",
+   "needsApproval": false,
+   "dueAt": "2026-10-23T21:00:00.000Z",
+   "text": "If you are a Scorpio, Cancer or Pisces... Someone from your past is about to reach out. Don't answer too fast.\n\nVenus (love) is retrograde and Mercury (messages) turns retrograde in Scorpio on Oct 24, the classic \"ex comes back\" transit, and the water signs feel it first 🌊\n\nType YES 👇\n\n#tarot #lovereading #zodiac #scorpio #cancer #pisces #lovetarot #mercuryretrograde #venusretrograde",
+   "assets": [
+    {
+     "video": {
+      "url": "https://faficka.github.io/tl-media/v/T01_scorpio_cancer_pisces_v2.mp4"
+     }
+    }
+   ]
+  }
+ },
+ {
   "due": "2026-10-24T20:00:00.000Z",
   "service": "instagram",
   "label": "2026-10-24 16:00 ET video T04_gemini_libra_aquarius (automatic)",
@@ -289,7 +377,7 @@
    "assets": [
     {
      "video": {
-      "url": "https://faficka.github.io/tl-media/v/T04_gemini_libra_aquarius.mp4"
+      "url": "https://faficka.github.io/tl-media/v/T04_gemini_libra_aquarius_v2.mp4"
      }
     }
    ],
@@ -314,7 +402,7 @@
    "assets": [
     {
      "video": {
-      "url": "https://faficka.github.io/tl-media/v/T04_gemini_libra_aquarius.mp4"
+      "url": "https://faficka.github.io/tl-media/v/T04_gemini_libra_aquarius_v2.mp4"
      }
     }
    ]
