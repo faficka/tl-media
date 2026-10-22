@@ -189,55 +189,11 @@
   }
  },
  {
-  "due": "2026-10-21T20:00:00.000Z",
-  "service": "instagram",
-  "label": "2026-10-21 16:00 ET video T01_scorpio_cancer_pisces (notification)",
-  "post": {
-   "schedulingType": "notification",
-   "mode": "customScheduled",
-   "needsApproval": false,
-   "dueAt": "2026-10-21T20:00:00.000Z",
-   "text": "If you are a Scorpio, Cancer or Pisces... Someone from your past is about to reach out. Don't answer too fast.\n\nType YES 👇\n\n#tarot #lovereading #zodiac #scorpio #cancer #pisces #lovetarot",
-   "assets": [
-    {
-     "video": {
-      "url": "https://faficka.github.io/tl-media/v/T01_scorpio_cancer_pisces.mp4"
-     }
-    }
-   ],
-   "metadata": {
-    "instagram": {
-     "type": "reel",
-     "shouldShareToFeed": true
-    }
-   }
-  }
- },
- {
-  "due": "2026-10-21T20:00:00.000Z",
-  "service": "tiktok",
-  "label": "2026-10-21 16:00 ET video T01_scorpio_cancer_pisces (notification)",
-  "post": {
-   "schedulingType": "notification",
-   "mode": "customScheduled",
-   "needsApproval": false,
-   "dueAt": "2026-10-21T20:00:00.000Z",
-   "text": "If you are a Scorpio, Cancer or Pisces... Someone from your past is about to reach out. Don't answer too fast.\n\nType YES 👇\n\n#tarot #lovereading #zodiac #scorpio #cancer #pisces #lovetarot",
-   "assets": [
-    {
-     "video": {
-      "url": "https://faficka.github.io/tl-media/v/T01_scorpio_cancer_pisces.mp4"
-     }
-    }
-   ]
-  }
- },
- {
   "due": "2026-10-22T20:00:00.000Z",
   "service": "instagram",
-  "label": "2026-10-22 16:00 ET video T02_aries_leo_sagittarius (notification)",
+  "label": "2026-10-22 16:00 ET video T02_aries_leo_sagittarius (automatic)",
   "post": {
-   "schedulingType": "notification",
+   "schedulingType": "automatic",
    "mode": "customScheduled",
    "needsApproval": false,
    "dueAt": "2026-10-22T20:00:00.000Z",
@@ -260,9 +216,9 @@
  {
   "due": "2026-10-22T20:00:00.000Z",
   "service": "tiktok",
-  "label": "2026-10-22 16:00 ET video T02_aries_leo_sagittarius (notification)",
+  "label": "2026-10-22 16:00 ET video T02_aries_leo_sagittarius (automatic)",
   "post": {
-   "schedulingType": "notification",
+   "schedulingType": "automatic",
    "mode": "customScheduled",
    "needsApproval": false,
    "dueAt": "2026-10-22T20:00:00.000Z",
@@ -279,9 +235,9 @@
  {
   "due": "2026-10-23T20:00:00.000Z",
   "service": "instagram",
-  "label": "2026-10-23 16:00 ET video T03_taurus_virgo_capricorn (notification)",
+  "label": "2026-10-23 16:00 ET video T03_taurus_virgo_capricorn (automatic)",
   "post": {
-   "schedulingType": "notification",
+   "schedulingType": "automatic",
    "mode": "customScheduled",
    "needsApproval": false,
    "dueAt": "2026-10-23T20:00:00.000Z",
@@ -304,9 +260,9 @@
  {
   "due": "2026-10-23T20:00:00.000Z",
   "service": "tiktok",
-  "label": "2026-10-23 16:00 ET video T03_taurus_virgo_capricorn (notification)",
+  "label": "2026-10-23 16:00 ET video T03_taurus_virgo_capricorn (automatic)",
   "post": {
-   "schedulingType": "notification",
+   "schedulingType": "automatic",
    "mode": "customScheduled",
    "needsApproval": false,
    "dueAt": "2026-10-23T20:00:00.000Z",
@@ -323,9 +279,9 @@
  {
   "due": "2026-10-24T20:00:00.000Z",
   "service": "instagram",
-  "label": "2026-10-24 16:00 ET video T04_gemini_libra_aquarius (notification)",
+  "label": "2026-10-24 16:00 ET video T04_gemini_libra_aquarius (automatic)",
   "post": {
-   "schedulingType": "notification",
+   "schedulingType": "automatic",
    "mode": "customScheduled",
    "needsApproval": false,
    "dueAt": "2026-10-24T20:00:00.000Z",
@@ -348,9 +304,9 @@
  {
   "due": "2026-10-24T20:00:00.000Z",
   "service": "tiktok",
-  "label": "2026-10-24 16:00 ET video T04_gemini_libra_aquarius (notification)",
+  "label": "2026-10-24 16:00 ET video T04_gemini_libra_aquarius (automatic)",
   "post": {
-   "schedulingType": "notification",
+   "schedulingType": "automatic",
    "mode": "customScheduled",
    "needsApproval": false,
    "dueAt": "2026-10-24T20:00:00.000Z",
@@ -367,9 +323,9 @@
  {
   "due": "2026-10-25T20:00:00.000Z",
   "service": "instagram",
-  "label": "2026-10-25 16:00 ET video T05_cancer_capricorn_libra (notification)",
+  "label": "2026-10-25 16:00 ET video T05_cancer_capricorn_libra (automatic)",
   "post": {
-   "schedulingType": "notification",
+   "schedulingType": "automatic",
    "mode": "customScheduled",
    "needsApproval": false,
    "dueAt": "2026-10-25T20:00:00.000Z",
@@ -392,9 +348,9 @@
  {
   "due": "2026-10-25T20:00:00.000Z",
   "service": "tiktok",
-  "label": "2026-10-25 16:00 ET video T05_cancer_capricorn_libra (notification)",
+  "label": "2026-10-25 16:00 ET video T05_cancer_capricorn_libra (automatic)",
   "post": {
-   "schedulingType": "notification",
+   "schedulingType": "automatic",
    "mode": "customScheduled",
    "needsApproval": false,
    "dueAt": "2026-10-25T20:00:00.000Z",
@@ -411,9 +367,9 @@
  {
   "due": "2026-10-26T20:00:00.000Z",
   "service": "instagram",
-  "label": "2026-10-26 16:00 ET video A_angel_numbers (notification)",
+  "label": "2026-10-26 16:00 ET video A_angel_numbers (automatic)",
   "post": {
-   "schedulingType": "notification",
+   "schedulingType": "automatic",
    "mode": "customScheduled",
    "needsApproval": false,
    "dueAt": "2026-10-26T20:00:00.000Z",
@@ -436,9 +392,9 @@
  {
   "due": "2026-10-26T20:00:00.000Z",
   "service": "tiktok",
-  "label": "2026-10-26 16:00 ET video A_angel_numbers (notification)",
+  "label": "2026-10-26 16:00 ET video A_angel_numbers (automatic)",
   "post": {
-   "schedulingType": "notification",
+   "schedulingType": "automatic",
    "mode": "customScheduled",
    "needsApproval": false,
    "dueAt": "2026-10-26T20:00:00.000Z",
@@ -499,9 +455,9 @@
  {
   "due": "2026-10-27T20:00:00.000Z",
   "service": "instagram",
-  "label": "2026-10-27 16:00 ET video T06_pisces_taurus_leo (notification)",
+  "label": "2026-10-27 16:00 ET video T06_pisces_taurus_leo (automatic)",
   "post": {
-   "schedulingType": "notification",
+   "schedulingType": "automatic",
    "mode": "customScheduled",
    "needsApproval": false,
    "dueAt": "2026-10-27T20:00:00.000Z",
@@ -524,9 +480,9 @@
  {
   "due": "2026-10-27T20:00:00.000Z",
   "service": "tiktok",
-  "label": "2026-10-27 16:00 ET video T06_pisces_taurus_leo (notification)",
+  "label": "2026-10-27 16:00 ET video T06_pisces_taurus_leo (automatic)",
   "post": {
-   "schedulingType": "notification",
+   "schedulingType": "automatic",
    "mode": "customScheduled",
    "needsApproval": false,
    "dueAt": "2026-10-27T20:00:00.000Z",
