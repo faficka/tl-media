@@ -189,6 +189,35 @@
   }
  },
  {
+  "due": "2026-10-22T17:00:00.000Z",
+  "service": "pinterest",
+  "label": "2026-10-22 12:00 ET carousel 2027 Aries (notification) pin",
+  "board": "Tarot Reading",
+  "post": {
+   "schedulingType": "automatic",
+   "mode": "customScheduled",
+   "needsApproval": false,
+   "dueAt": "2026-10-22T17:00:00.000Z",
+   "text": "Aries 2027 horoscope and tarot reading: the year everyone who doubted you has to watch you win. Saturn and Neptune both sit in Aries in 2027 and the universe is promoting you. Love, money, career, health and friendship predictions for Aries in 2027, plus your tarot card of the year: The Emperor. Save this Aries 2027 forecast for later.",
+   "assets": [
+    {
+     "image": {
+      "url": "https://faficka.github.io/tl-media/c/2027_01_aries_01.jpg",
+      "metadata": {
+       "altText": "Aries 2027 horoscope and tarot destiny timeline carousel cover"
+      }
+     }
+    }
+   ],
+   "metadata": {
+    "pinterest": {
+     "title": "Aries 2027 Horoscope: Love, Money and Career Predictions",
+     "url": ""
+    }
+   }
+  }
+ },
+ {
   "due": "2026-10-22T20:00:00.000Z",
   "service": "instagram",
   "label": "2026-10-22 16:00 ET video T02_aries_leo_sagittarius (automatic)",
