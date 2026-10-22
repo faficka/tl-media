@@ -306,6 +306,35 @@
   }
  },
  {
+  "due": "2026-10-23T17:00:00.000Z",
+  "service": "pinterest",
+  "label": "2026-10-23 12:00 ET carousel 2027 Taurus (notification) pin",
+  "board": "Tarot Reading",
+  "post": {
+   "schedulingType": "automatic",
+   "mode": "customScheduled",
+   "needsApproval": false,
+   "dueAt": "2026-10-23T17:00:00.000Z",
+   "text": "Taurus 2027 horoscope and tarot reading: the year you charge what you're worth and lose the cheap people. Uranus has left your sign and moved into your money zone. The chaos is over, now it is about what you are worth. Love, money, career, health and friendship predictions for Taurus in 2027, plus your tarot card of the year: Nine of Pentacles. Save this Taurus 2027 forecast for later.",
+   "assets": [
+    {
+     "image": {
+      "url": "https://faficka.github.io/tl-media/c/2027_02_taurus_01.jpg",
+      "metadata": {
+       "altText": "Taurus 2027 horoscope and tarot destiny timeline carousel cover"
+      }
+     }
+    }
+   ],
+   "metadata": {
+    "pinterest": {
+     "title": "Taurus 2027 Horoscope: Love, Money and Career Predictions",
+     "url": ""
+    }
+   }
+  }
+ },
+ {
   "due": "2026-10-23T20:00:00.000Z",
   "service": "instagram",
   "label": "2026-10-23 16:00 ET video T03_taurus_virgo_capricorn (automatic)",
@@ -394,6 +423,35 @@
   }
  },
  {
+  "due": "2026-10-24T17:00:00.000Z",
+  "service": "pinterest",
+  "label": "2026-10-24 12:00 ET carousel 2027 Gemini (notification) pin",
+  "board": "Tarot Reading",
+  "post": {
+   "schedulingType": "automatic",
+   "mode": "customScheduled",
+   "needsApproval": false,
+   "dueAt": "2026-10-24T17:00:00.000Z",
+   "text": "Gemini 2027 horoscope and tarot reading: the year the old you dies and nobody gets a goodbye. Uranus, the planet of sudden change, is in your sign. 2027 is not a glow-up, it is a funeral for the old you. Love, money, career, health and friendship predictions for Gemini in 2027, plus your tarot card of the year: Judgement. Save this Gemini 2027 forecast for later.",
+   "assets": [
+    {
+     "image": {
+      "url": "https://faficka.github.io/tl-media/c/2027_03_gemini_01.jpg",
+      "metadata": {
+       "altText": "Gemini 2027 horoscope and tarot destiny timeline carousel cover"
+      }
+     }
+    }
+   ],
+   "metadata": {
+    "pinterest": {
+     "title": "Gemini 2027 Horoscope: Love, Money and Career Predictions",
+     "url": ""
+    }
+   }
+  }
+ },
+ {
   "due": "2026-10-24T20:00:00.000Z",
   "service": "instagram",
   "label": "2026-10-24 16:00 ET video T04_gemini_libra_aquarius (automatic)",
@@ -438,6 +496,35 @@
   }
  },
  {
+  "due": "2026-10-25T17:00:00.000Z",
+  "service": "pinterest",
+  "label": "2026-10-25 12:00 ET carousel 2027 Cancer (notification) pin",
+  "board": "Tarot Reading",
+  "post": {
+   "schedulingType": "automatic",
+   "mode": "customScheduled",
+   "needsApproval": false,
+   "dueAt": "2026-10-25T17:00:00.000Z",
+   "text": "Cancer 2027 horoscope and tarot reading: the year you stop mothering grown adults. You have been everyone's therapist, nurse, bank and emotional support. Nobody gave you the job, you just took it. Love, money, career, health and friendship predictions for Cancer in 2027, plus your tarot card of the year: Queen of Cups. Save this Cancer 2027 forecast for later.",
+   "assets": [
+    {
+     "image": {
+      "url": "https://faficka.github.io/tl-media/c/2027_04_cancer_01.jpg",
+      "metadata": {
+       "altText": "Cancer 2027 horoscope and tarot destiny timeline carousel cover"
+      }
+     }
+    }
+   ],
+   "metadata": {
+    "pinterest": {
+     "title": "Cancer 2027 Horoscope: Love, Money and Career Predictions",
+     "url": ""
+    }
+   }
+  }
+ },
+ {
   "due": "2026-10-25T20:00:00.000Z",
   "service": "instagram",
   "label": "2026-10-25 16:00 ET video T05_cancer_capricorn_libra (automatic)",
@@ -479,6 +566,35 @@
      }
     }
    ]
+  }
+ },
+ {
+  "due": "2026-10-26T17:00:00.000Z",
+  "service": "pinterest",
+  "label": "2026-10-26 12:00 ET carousel 2027 Leo (notification) pin",
+  "board": "Tarot Reading",
+  "post": {
+   "schedulingType": "automatic",
+   "mode": "customScheduled",
+   "needsApproval": false,
+   "dueAt": "2026-10-26T17:00:00.000Z",
+   "text": "Leo 2027 horoscope and tarot reading: the year you find out who only loved your glow. Jupiter is in your sign until summer, and on August 2 a total solar eclipse hits Leo. Everyone is about to look at you. Love, money, career, health and friendship predictions for Leo in 2027, plus your tarot card of the year: The Moon. Save this Leo 2027 forecast for later.",
+   "assets": [
+    {
+     "image": {
+      "url": "https://faficka.github.io/tl-media/c/2027_05_leo_01.jpg",
+      "metadata": {
+       "altText": "Leo 2027 horoscope and tarot destiny timeline carousel cover"
+      }
+     }
+    }
+   ],
+   "metadata": {
+    "pinterest": {
+     "title": "Leo 2027 Horoscope: Love, Money and Career Predictions",
+     "url": ""
+    }
+   }
   }
  },
  {
