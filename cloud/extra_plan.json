@@ -686,6 +686,35 @@
   }
  },
  {
+  "due": "2026-10-27T17:00:00.000Z",
+  "service": "pinterest",
+  "label": "2026-10-27 12:00 ET carousel 2027 Virgo (notification) pin",
+  "board": "Tarot Reading",
+  "post": {
+   "schedulingType": "automatic",
+   "mode": "customScheduled",
+   "needsApproval": false,
+   "dueAt": "2026-10-27T17:00:00.000Z",
+   "text": "Virgo 2027 horoscope and tarot reading: the year you stop being perfect for people who never even tried. In late July Jupiter enters your sign for the first time in 12 years. 2027 rewards you, not your to-do list. Love, money, career, health and friendship predictions for Virgo in 2027, plus your tarot card of the year: Wheel of Fortune. Save this Virgo 2027 forecast for later.",
+   "assets": [
+    {
+     "image": {
+      "url": "https://faficka.github.io/tl-media/c/2027_06_virgo_01.jpg",
+      "metadata": {
+       "altText": "Virgo 2027 horoscope and tarot destiny timeline carousel cover"
+      }
+     }
+    }
+   ],
+   "metadata": {
+    "pinterest": {
+     "title": "Virgo 2027 Horoscope: Love, Money and Career Predictions",
+     "url": ""
+    }
+   }
+  }
+ },
+ {
   "due": "2026-10-27T20:00:00.000Z",
   "service": "instagram",
   "label": "2026-10-27 16:00 ET video T06_pisces_taurus_leo (automatic)",
@@ -771,6 +800,35 @@
      }
     }
    ]
+  }
+ },
+ {
+  "due": "2026-10-28T17:00:00.000Z",
+  "service": "pinterest",
+  "label": "2026-10-28 12:00 ET carousel 2027 Libra (notification) pin",
+  "board": "Tarot Reading",
+  "post": {
+   "schedulingType": "automatic",
+   "mode": "customScheduled",
+   "needsApproval": false,
+   "dueAt": "2026-10-28T17:00:00.000Z",
+   "text": "Libra 2027 horoscope and tarot reading: the year you find out who you've been settling for. Saturn and Neptune are both in your relationship zone in 2027. Every partnership in your life gets tested. Love, money, career, health and friendship predictions for Libra in 2027, plus your tarot card of the year: The Lovers. Save this Libra 2027 forecast for later.",
+   "assets": [
+    {
+     "image": {
+      "url": "https://faficka.github.io/tl-media/c/2027_07_libra_01.jpg",
+      "metadata": {
+       "altText": "Libra 2027 horoscope and tarot destiny timeline carousel cover"
+      }
+     }
+    }
+   ],
+   "metadata": {
+    "pinterest": {
+     "title": "Libra 2027 Horoscope: Love, Money and Career Predictions",
+     "url": ""
+    }
+   }
   }
  },
  {
