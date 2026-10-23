@@ -499,14 +499,14 @@
   }
  },
  {
-  "due": "2026-10-23T23:30:00.000Z",
+  "due": "2026-10-29T21:00:00.000Z",
   "service": "instagram",
-  "label": "2026-10-23 19:30 ET reel R10_the_chariot",
+  "label": "2026-10-29T21:00Z R10_the_chariot",
   "post": {
    "schedulingType": "automatic",
    "mode": "customScheduled",
    "needsApproval": false,
-   "dueAt": "2026-10-23T23:30:00.000Z",
+   "dueAt": "2026-10-29T21:00:00.000Z",
    "assets": [
     {
      "video": {
@@ -524,14 +524,14 @@
   }
  },
  {
-  "due": "2026-10-23T23:30:00.000Z",
+  "due": "2026-10-29T21:00:00.000Z",
   "service": "tiktok",
-  "label": "2026-10-23 19:30 ET reel R10_the_chariot",
+  "label": "2026-10-29T21:00Z R10_the_chariot",
   "post": {
    "schedulingType": "automatic",
    "mode": "customScheduled",
    "needsApproval": false,
-   "dueAt": "2026-10-23T23:30:00.000Z",
+   "dueAt": "2026-10-29T21:00:00.000Z",
    "assets": [
     {
      "video": {
@@ -543,14 +543,14 @@
   }
  },
  {
-  "due": "2026-10-24T23:30:00.000Z",
+  "due": "2026-10-30T21:00:00.000Z",
   "service": "instagram",
-  "label": "2026-10-24 19:30 ET reel R11_queen_of_wands",
+  "label": "2026-10-30T21:00Z R11_queen_of_wands",
   "post": {
    "schedulingType": "automatic",
    "mode": "customScheduled",
    "needsApproval": false,
-   "dueAt": "2026-10-24T23:30:00.000Z",
+   "dueAt": "2026-10-30T21:00:00.000Z",
    "assets": [
     {
      "video": {
@@ -568,14 +568,14 @@
   }
  },
  {
-  "due": "2026-10-24T23:30:00.000Z",
+  "due": "2026-10-30T21:00:00.000Z",
   "service": "tiktok",
-  "label": "2026-10-24 19:30 ET reel R11_queen_of_wands",
+  "label": "2026-10-30T21:00Z R11_queen_of_wands",
   "post": {
    "schedulingType": "automatic",
    "mode": "customScheduled",
    "needsApproval": false,
-   "dueAt": "2026-10-24T23:30:00.000Z",
+   "dueAt": "2026-10-30T21:00:00.000Z",
    "assets": [
     {
      "video": {
@@ -587,14 +587,14 @@
   }
  },
  {
-  "due": "2026-10-25T23:30:00.000Z",
+  "due": "2026-10-31T21:00:00.000Z",
   "service": "instagram",
-  "label": "2026-10-25 19:30 ET reel R12_knight_of_wands",
+  "label": "2026-10-31T21:00Z R12_knight_of_wands",
   "post": {
    "schedulingType": "automatic",
    "mode": "customScheduled",
    "needsApproval": false,
-   "dueAt": "2026-10-25T23:30:00.000Z",
+   "dueAt": "2026-10-31T21:00:00.000Z",
    "assets": [
     {
      "video": {
@@ -612,14 +612,14 @@
   }
  },
  {
-  "due": "2026-10-25T23:30:00.000Z",
+  "due": "2026-10-31T21:00:00.000Z",
   "service": "tiktok",
-  "label": "2026-10-25 19:30 ET reel R12_knight_of_wands",
+  "label": "2026-10-31T21:00Z R12_knight_of_wands",
   "post": {
    "schedulingType": "automatic",
    "mode": "customScheduled",
    "needsApproval": false,
-   "dueAt": "2026-10-25T23:30:00.000Z",
+   "dueAt": "2026-10-31T21:00:00.000Z",
    "assets": [
     {
      "video": {
