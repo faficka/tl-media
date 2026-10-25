@@ -1140,6 +1140,50 @@
   }
  },
  {
+  "due": "2026-11-02T01:00:00.000Z",
+  "service": "instagram",
+  "label": "2026-11-01 20:00 ET video L01_ex_will_text",
+  "post": {
+   "schedulingType": "automatic",
+   "mode": "customScheduled",
+   "needsApproval": false,
+   "dueAt": "2026-11-02T01:00:00.000Z",
+   "text": "Is your sign on the list? Don't answer. 👀\n\nMercury retrograde in Scorpio (Oct 24 – Nov 13) + Venus retrograde = the exes are coming back. Which one already texted you?\n\n#mercuryretrograde #zodiacsigns #astrology #exback #tarot #zodiac #scorpioseason #venusretrograde",
+   "assets": [
+    {
+     "video": {
+      "url": "https://faficka.github.io/tl-media/v/L01_ex_will_text.mp4"
+     }
+    }
+   ],
+   "metadata": {
+    "instagram": {
+     "type": "reel",
+     "shouldShareToFeed": true
+    }
+   }
+  }
+ },
+ {
+  "due": "2026-11-02T01:00:00.000Z",
+  "service": "tiktok",
+  "label": "2026-11-01 20:00 ET video L01_ex_will_text",
+  "post": {
+   "schedulingType": "automatic",
+   "mode": "customScheduled",
+   "needsApproval": false,
+   "dueAt": "2026-11-02T01:00:00.000Z",
+   "text": "Is your sign on the list? Don't answer. 👀\n\nMercury retrograde in Scorpio (Oct 24 – Nov 13) + Venus retrograde = the exes are coming back. Which one already texted you?\n\n#mercuryretrograde #zodiacsigns #astrology #exback #tarot #zodiac #scorpioseason #venusretrograde",
+   "assets": [
+    {
+     "video": {
+      "url": "https://faficka.github.io/tl-media/v/L01_ex_will_text.mp4"
+     }
+    }
+   ]
+  }
+ },
+ {
   "due": "2026-11-02T21:00:00.000Z",
   "service": "instagram",
   "label": "2026-11-02 16:00 ET video T08_taurus_scorpio_aquarius",
