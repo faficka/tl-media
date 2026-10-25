@@ -91,6 +91,42 @@ def summary(found, day):
     return "\n".join(lines) if len(lines) > 1 else lines[0] + " nic naplánovaného."
 
 
+# channels that must never run empty (user, 2026-10-25: Printara TikTok went 3 days without posts)
+WATCH = [("GARY", "instagram"), ("GARY", "youtube"), ("TALIA", "tiktok"), ("TALIA", "instagram"),
+         ("PRINTARA", "tiktok"), ("PRINTARA", "instagram")]
+# Pinterest queues hold < 2 days of pins (10 slots), so their runway comes from the plan files the fill jobs read
+PLANS = {("TALIA", "pinterest"): "pinterest_plan.json", ("PRINTARA", "pinterest"): "printara_plan.json"}
+RUNWAY = dt.timedelta(days=3)
+
+
+def runway(found, now):
+    """Warning lines for channels whose last planned post is less than RUNWAY away (or that have none)."""
+    last = {}
+    for brand, p in found:
+        if p["status"] == "scheduled" and when(p) > now:
+            k = (brand, p["channel"]["service"])
+            last[k] = max(last.get(k, when(p)), when(p))
+    for k, name in PLANS.items():
+        path = STATE.parent / name
+        if path.exists():
+            due = [dt.datetime.fromisoformat(i["due"].replace("Z", "+00:00")) for i in
+                   json.loads(path.read_text(encoding="utf-8"))]
+            last[k] = max(due).astimezone(PRAGUE) if due else None
+    rem = STATE.parent / "tg_reminders.json"
+    if rem.exists():
+        due = [dt.datetime.fromisoformat(r["at"].replace("Z", "+00:00")) for r in
+               json.loads(rem.read_text(encoding="utf-8")) if r["id"].startswith("karusel")]
+        last[("TALIA", "karusely")] = max(due).astimezone(PRAGUE) if due else None
+    lines = []
+    for k in WATCH + list(PLANS) + [("TALIA", "karusely")]:
+        t = last.get(k)
+        if t is None or t - now < RUNWAY:
+            name = SERVICE.get(k[1], k[1])
+            lines.append(f"⚠️ {k[0]} · {name}: " + (f"poslední post {t.strftime('%d.%m. %H:%M')}" if t else
+                                                    "nic naplánováno") + " – doplň obsah!")
+    return lines
+
+
 def send(text, dry):
     if dry:
         print("---\n" + text)
@@ -145,7 +181,8 @@ def main(dry):
     reminders(state, now, dry)
     today = now.astimezone(PRAGUE)
     if today.hour >= 8 and state.get("summary") != today.date().isoformat():
-        send(summary(found, today.date()), dry)
+        warn = runway(found, now)
+        send(summary(found, today.date()) + ("\n\n" + "\n".join(warn) if warn else ""), dry)
         state["summary"] = today.date().isoformat()
     cutoff = (now - dt.timedelta(days=3)).strftime("%Y-%m-%dT%H:%M")
     state["done"] = {k: v for k, v in done.items() if v >= cutoff}
