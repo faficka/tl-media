@@ -3,9 +3,9 @@
 Same logic as talia_fill.py, for Printara's own Buffer organization (secret BUFFER_KEY_PRINTARA).
 Buffer's free plan holds max 10 scheduled posts per channel. Every run creates the next planned posts that are
 not in Buffer yet (matched by channel + due minute) while the channel has free slots. Past items are skipped.
-The plan is written by ASTRA/Printara/tools/build_pins_xmas_subs.py (Christmas pins selling subscriptions);
+The plan is written by ASTRA/Printara/tools/build_pins_gifts.py (gift-guide pins, one unique photo per pin);
 a planned post deleted by hand in Buffer gets re-created - remove it from the plan instead (--plan-only, then push).
-Pinterest items carry "board" = board name, resolved here.
+Pinterest items carry "board" = board name, resolved here; if that board does not exist (yet), "fallback_board" is used.
 Usage: BUFFER_KEY_PRINTARA=... python3 cloud/printara_fill.py cloud/printara_plan.json [--dry]
 """
 import datetime as dt
@@ -66,7 +66,8 @@ def main(plan_paths, dry=False):
             continue
         post = {**it["post"], "channelId": cid}
         if "board" in it:
-            post["metadata"] = {"pinterest": {**post["metadata"]["pinterest"], "boardServiceId": boards[it["board"]]}}
+            board = boards.get(it["board"]) or boards[it["fallback_board"]]
+            post["metadata"] = {"pinterest": {**post["metadata"]["pinterest"], "boardServiceId": board}}
         if dry:
             queued[cid] += 1
             print("DRY ", it["service"], it["due"], it["label"], post["metadata"]["pinterest"].get("boardServiceId"))
