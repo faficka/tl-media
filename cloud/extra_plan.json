@@ -1446,5 +1446,313 @@
     }
    ]
   }
+ },
+ {
+  "due": "2026-11-08T21:00:00.000Z",
+  "service": "instagram",
+  "label": "2026-11-08 16:00 ET video T14_gemini_scorpio_capricorn",
+  "post": {
+   "schedulingType": "automatic",
+   "mode": "customScheduled",
+   "needsApproval": false,
+   "dueAt": "2026-11-08T21:00:00.000Z",
+   "text": "If you are a Gemini, Scorpio or Capricorn... You don't have trust issues. You have \"they showed you who they are\" issues.\n\nType YES 👇\n\n#tarot #lovereading #zodiac #gemini #scorpio #capricorn #lovetarot",
+   "assets": [
+    {
+     "video": {
+      "url": "https://faficka.github.io/tl-media/v/T14_gemini_scorpio_capricorn.mp4"
+     }
+    }
+   ],
+   "metadata": {
+    "instagram": {
+     "type": "reel",
+     "shouldShareToFeed": true
+    }
+   }
+  }
+ },
+ {
+  "due": "2026-11-08T21:00:00.000Z",
+  "service": "tiktok",
+  "label": "2026-11-08 16:00 ET video T14_gemini_scorpio_capricorn",
+  "post": {
+   "schedulingType": "automatic",
+   "mode": "customScheduled",
+   "needsApproval": false,
+   "dueAt": "2026-11-08T21:00:00.000Z",
+   "text": "If you are a Gemini, Scorpio or Capricorn... You don't have trust issues. You have \"they showed you who they are\" issues.\n\nType YES 👇\n\n#tarot #lovereading #zodiac #gemini #scorpio #capricorn #lovetarot",
+   "assets": [
+    {
+     "video": {
+      "url": "https://faficka.github.io/tl-media/v/T14_gemini_scorpio_capricorn.mp4"
+     }
+    }
+   ]
+  }
+ },
+ {
+  "due": "2026-11-09T21:00:00.000Z",
+  "service": "instagram",
+  "label": "2026-11-09 16:00 ET video T15_leo_libra_pisces",
+  "post": {
+   "schedulingType": "automatic",
+   "mode": "customScheduled",
+   "needsApproval": false,
+   "dueAt": "2026-11-09T21:00:00.000Z",
+   "text": "If you are a Leo, Libra or Pisces... They're not confused about you. They just like having you as an option.\n\nType YES 👇\n\n#tarot #lovereading #zodiac #leo #libra #pisces #lovetarot",
+   "assets": [
+    {
+     "video": {
+      "url": "https://faficka.github.io/tl-media/v/T15_leo_libra_pisces.mp4"
+     }
+    }
+   ],
+   "metadata": {
+    "instagram": {
+     "type": "reel",
+     "shouldShareToFeed": true
+    }
+   }
+  }
+ },
+ {
+  "due": "2026-11-09T21:00:00.000Z",
+  "service": "tiktok",
+  "label": "2026-11-09 16:00 ET video T15_leo_libra_pisces",
+  "post": {
+   "schedulingType": "automatic",
+   "mode": "customScheduled",
+   "needsApproval": false,
+   "dueAt": "2026-11-09T21:00:00.000Z",
+   "text": "If you are a Leo, Libra or Pisces... They're not confused about you. They just like having you as an option.\n\nType YES 👇\n\n#tarot #lovereading #zodiac #leo #libra #pisces #lovetarot",
+   "assets": [
+    {
+     "video": {
+      "url": "https://faficka.github.io/tl-media/v/T15_leo_libra_pisces.mp4"
+     }
+    }
+   ]
+  }
+ },
+ {
+  "due": "2026-11-10T21:00:00.000Z",
+  "service": "instagram",
+  "label": "2026-11-10 16:00 ET video T16_aries_cancer_aquarius",
+  "post": {
+   "schedulingType": "automatic",
+   "mode": "customScheduled",
+   "needsApproval": false,
+   "dueAt": "2026-11-10T21:00:00.000Z",
+   "text": "If you are an Aries, Cancer or Aquarius... The one who hurt you most is about to come back like nothing happened.\n\nType YES 👇\n\n#tarot #lovereading #zodiac #aries #cancer #aquarius #lovetarot",
+   "assets": [
+    {
+     "video": {
+      "url": "https://faficka.github.io/tl-media/v/T16_aries_cancer_aquarius.mp4"
+     }
+    }
+   ],
+   "metadata": {
+    "instagram": {
+     "type": "reel",
+     "shouldShareToFeed": true
+    }
+   }
+  }
+ },
+ {
+  "due": "2026-11-10T21:00:00.000Z",
+  "service": "tiktok",
+  "label": "2026-11-10 16:00 ET video T16_aries_cancer_aquarius",
+  "post": {
+   "schedulingType": "automatic",
+   "mode": "customScheduled",
+   "needsApproval": false,
+   "dueAt": "2026-11-10T21:00:00.000Z",
+   "text": "If you are an Aries, Cancer or Aquarius... The one who hurt you most is about to come back like nothing happened.\n\nType YES 👇\n\n#tarot #lovereading #zodiac #aries #cancer #aquarius #lovetarot",
+   "assets": [
+    {
+     "video": {
+      "url": "https://faficka.github.io/tl-media/v/T16_aries_cancer_aquarius.mp4"
+     }
+    }
+   ]
+  }
+ },
+ {
+  "due": "2026-11-11T21:00:00.000Z",
+  "service": "instagram",
+  "label": "2026-11-11 16:00 ET video T17_gemini_virgo_sagittarius",
+  "post": {
+   "schedulingType": "automatic",
+   "mode": "customScheduled",
+   "needsApproval": false,
+   "dueAt": "2026-11-11T21:00:00.000Z",
+   "text": "If you are a Gemini, Virgo or Sagittarius... Stop calling it a situationship. They know exactly what they're doing.\n\nType YES 👇\n\n#tarot #lovereading #zodiac #gemini #virgo #sagittarius #lovetarot",
+   "assets": [
+    {
+     "video": {
+      "url": "https://faficka.github.io/tl-media/v/T17_gemini_virgo_sagittarius.mp4"
+     }
+    }
+   ],
+   "metadata": {
+    "instagram": {
+     "type": "reel",
+     "shouldShareToFeed": true
+    }
+   }
+  }
+ },
+ {
+  "due": "2026-11-11T21:00:00.000Z",
+  "service": "tiktok",
+  "label": "2026-11-11 16:00 ET video T17_gemini_virgo_sagittarius",
+  "post": {
+   "schedulingType": "automatic",
+   "mode": "customScheduled",
+   "needsApproval": false,
+   "dueAt": "2026-11-11T21:00:00.000Z",
+   "text": "If you are a Gemini, Virgo or Sagittarius... Stop calling it a situationship. They know exactly what they're doing.\n\nType YES 👇\n\n#tarot #lovereading #zodiac #gemini #virgo #sagittarius #lovetarot",
+   "assets": [
+    {
+     "video": {
+      "url": "https://faficka.github.io/tl-media/v/T17_gemini_virgo_sagittarius.mp4"
+     }
+    }
+   ]
+  }
+ },
+ {
+  "due": "2026-11-12T21:00:00.000Z",
+  "service": "instagram",
+  "label": "2026-11-12 16:00 ET video T18_taurus_leo_scorpio",
+  "post": {
+   "schedulingType": "automatic",
+   "mode": "customScheduled",
+   "needsApproval": false,
+   "dueAt": "2026-11-12T21:00:00.000Z",
+   "text": "If you are a Taurus, Leo or Scorpio... If they wanted to, they would have. Stop writing their excuses for them.\n\nType YES 👇\n\n#tarot #lovereading #zodiac #taurus #leo #scorpio #lovetarot",
+   "assets": [
+    {
+     "video": {
+      "url": "https://faficka.github.io/tl-media/v/T18_taurus_leo_scorpio.mp4"
+     }
+    }
+   ],
+   "metadata": {
+    "instagram": {
+     "type": "reel",
+     "shouldShareToFeed": true
+    }
+   }
+  }
+ },
+ {
+  "due": "2026-11-12T21:00:00.000Z",
+  "service": "tiktok",
+  "label": "2026-11-12 16:00 ET video T18_taurus_leo_scorpio",
+  "post": {
+   "schedulingType": "automatic",
+   "mode": "customScheduled",
+   "needsApproval": false,
+   "dueAt": "2026-11-12T21:00:00.000Z",
+   "text": "If you are a Taurus, Leo or Scorpio... If they wanted to, they would have. Stop writing their excuses for them.\n\nType YES 👇\n\n#tarot #lovereading #zodiac #taurus #leo #scorpio #lovetarot",
+   "assets": [
+    {
+     "video": {
+      "url": "https://faficka.github.io/tl-media/v/T18_taurus_leo_scorpio.mp4"
+     }
+    }
+   ]
+  }
+ },
+ {
+  "due": "2026-11-13T21:00:00.000Z",
+  "service": "instagram",
+  "label": "2026-11-13 16:00 ET video T19_aries_gemini_pisces",
+  "post": {
+   "schedulingType": "automatic",
+   "mode": "customScheduled",
+   "needsApproval": false,
+   "dueAt": "2026-11-13T21:00:00.000Z",
+   "text": "If you are an Aries, Gemini or Pisces... Someone you blocked is still checking if you moved on. Make sure you did.\n\nType YES 👇\n\n#tarot #lovereading #zodiac #aries #gemini #pisces #lovetarot",
+   "assets": [
+    {
+     "video": {
+      "url": "https://faficka.github.io/tl-media/v/T19_aries_gemini_pisces.mp4"
+     }
+    }
+   ],
+   "metadata": {
+    "instagram": {
+     "type": "reel",
+     "shouldShareToFeed": true
+    }
+   }
+  }
+ },
+ {
+  "due": "2026-11-13T21:00:00.000Z",
+  "service": "tiktok",
+  "label": "2026-11-13 16:00 ET video T19_aries_gemini_pisces",
+  "post": {
+   "schedulingType": "automatic",
+   "mode": "customScheduled",
+   "needsApproval": false,
+   "dueAt": "2026-11-13T21:00:00.000Z",
+   "text": "If you are an Aries, Gemini or Pisces... Someone you blocked is still checking if you moved on. Make sure you did.\n\nType YES 👇\n\n#tarot #lovereading #zodiac #aries #gemini #pisces #lovetarot",
+   "assets": [
+    {
+     "video": {
+      "url": "https://faficka.github.io/tl-media/v/T19_aries_gemini_pisces.mp4"
+     }
+    }
+   ]
+  }
+ },
+ {
+  "due": "2026-11-14T21:00:00.000Z",
+  "service": "instagram",
+  "label": "2026-11-14 16:00 ET video T20_taurus_libra_sagittarius",
+  "post": {
+   "schedulingType": "automatic",
+   "mode": "customScheduled",
+   "needsApproval": false,
+   "dueAt": "2026-11-14T21:00:00.000Z",
+   "text": "If you are a Taurus, Libra or Sagittarius... The \"hey stranger\" text is coming. You already know your answer.\n\nType YES 👇\n\n#tarot #lovereading #zodiac #taurus #libra #sagittarius #lovetarot",
+   "assets": [
+    {
+     "video": {
+      "url": "https://faficka.github.io/tl-media/v/T20_taurus_libra_sagittarius.mp4"
+     }
+    }
+   ],
+   "metadata": {
+    "instagram": {
+     "type": "reel",
+     "shouldShareToFeed": true
+    }
+   }
+  }
+ },
+ {
+  "due": "2026-11-14T21:00:00.000Z",
+  "service": "tiktok",
+  "label": "2026-11-14 16:00 ET video T20_taurus_libra_sagittarius",
+  "post": {
+   "schedulingType": "automatic",
+   "mode": "customScheduled",
+   "needsApproval": false,
+   "dueAt": "2026-11-14T21:00:00.000Z",
+   "text": "If you are a Taurus, Libra or Sagittarius... The \"hey stranger\" text is coming. You already know your answer.\n\nType YES 👇\n\n#tarot #lovereading #zodiac #taurus #libra #sagittarius #lovetarot",
+   "assets": [
+    {
+     "video": {
+      "url": "https://faficka.github.io/tl-media/v/T20_taurus_libra_sagittarius.mp4"
+     }
+    }
+   ]
+  }
  }
 ]
