@@ -120,6 +120,66 @@
   }
  },
  {
+  "due": "2026-11-04T17:00:00.000Z",
+  "service": "instagram",
+  "label": "2026-11-04 18:00 Prague carousel love_05_pisces",
+  "post": {
+   "schedulingType": "automatic",
+   "mode": "customScheduled",
+   "needsApproval": false,
+   "dueAt": "2026-11-04T17:00:00.000Z",
+   "text": "Pisces, what you feel but will never say out loud 🐟 Which one hit too close? Comment the number. Send this to the Pisces who loves too hard and save it for when they go quiet.\n\nPart 5/12 of the love series. Aries drops Friday. Follow so you don't miss your sign 🔔\n\n#pisces #piscesseason #zodiac #astrology #tarot #lovetarot #relationships #pisceswoman #piscesman",
+   "assets": [
+    {
+     "image": {
+      "url": "https://faficka.github.io/tl-media/c/love_05_pisces_01.jpg"
+     }
+    },
+    {
+     "image": {
+      "url": "https://faficka.github.io/tl-media/c/love_05_pisces_02.jpg"
+     }
+    },
+    {
+     "image": {
+      "url": "https://faficka.github.io/tl-media/c/love_05_pisces_03.jpg"
+     }
+    },
+    {
+     "image": {
+      "url": "https://faficka.github.io/tl-media/c/love_05_pisces_04.jpg"
+     }
+    },
+    {
+     "image": {
+      "url": "https://faficka.github.io/tl-media/c/love_05_pisces_05.jpg"
+     }
+    },
+    {
+     "image": {
+      "url": "https://faficka.github.io/tl-media/c/love_05_pisces_06.jpg"
+     }
+    },
+    {
+     "image": {
+      "url": "https://faficka.github.io/tl-media/c/love_05_pisces_07.jpg"
+     }
+    },
+    {
+     "image": {
+      "url": "https://faficka.github.io/tl-media/c/love_05_pisces_08.jpg"
+     }
+    }
+   ],
+   "metadata": {
+    "instagram": {
+     "type": "post",
+     "shouldShareToFeed": true
+    }
+   }
+  }
+ },
+ {
   "due": "2026-11-05T17:00:00.000Z",
   "service": "instagram",
   "label": "2026-11-05 18:00 Prague carousel 2027_08_scorpio",
