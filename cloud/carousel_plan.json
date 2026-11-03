@@ -120,6 +120,65 @@
   }
  },
  {
+  "due": "2026-11-03T17:00:00.000Z",
+  "service": "tiktok",
+  "label": "2026-11-03 18:00 Prague carousel mercury_rx",
+  "post": {
+   "schedulingType": "automatic",
+   "mode": "customScheduled",
+   "needsApproval": false,
+   "dueAt": "2026-11-03T17:00:00.000Z",
+   "text": "Someone you blocked is about to find a new way to reach you 📵 Mercury retrograde ends Nov 13. Save this and check back on Nov 13. Already happened? Comment your sign.\n\nThe love series continues: Pisces drops tomorrow. Follow so you don't miss your sign 🔔\n\n#mercuryretrograde #zodiac #astrology #zodiacsigns #tarot #lovetarot #exes #relationships #horoscope",
+   "assets": [
+    {
+     "image": {
+      "url": "https://faficka.github.io/tl-media/c/mercury_rx_01.jpg"
+     }
+    },
+    {
+     "image": {
+      "url": "https://faficka.github.io/tl-media/c/mercury_rx_02.jpg"
+     }
+    },
+    {
+     "image": {
+      "url": "https://faficka.github.io/tl-media/c/mercury_rx_03.jpg"
+     }
+    },
+    {
+     "image": {
+      "url": "https://faficka.github.io/tl-media/c/mercury_rx_04.jpg"
+     }
+    },
+    {
+     "image": {
+      "url": "https://faficka.github.io/tl-media/c/mercury_rx_05.jpg"
+     }
+    },
+    {
+     "image": {
+      "url": "https://faficka.github.io/tl-media/c/mercury_rx_06.jpg"
+     }
+    },
+    {
+     "image": {
+      "url": "https://faficka.github.io/tl-media/c/mercury_rx_07.jpg"
+     }
+    },
+    {
+     "image": {
+      "url": "https://faficka.github.io/tl-media/c/mercury_rx_08.jpg"
+     }
+    }
+   ],
+   "metadata": {
+    "tiktok": {
+     "title": "Someone you blocked is about to find a new way to reach you 📵 Mercury retrograde ends…"
+    }
+   }
+  }
+ },
+ {
   "due": "2026-11-04T17:00:00.000Z",
   "service": "instagram",
   "label": "2026-11-04 18:00 Prague carousel love_05_pisces",
