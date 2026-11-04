@@ -3973,6 +3973,35 @@
   }
  },
  {
+  "due": "2026-11-05T17:15:00.000Z",
+  "service": "pinterest",
+  "label": "2026-11-05 12:15 ET pin sm_P01",
+  "board": "Soulmate Reading",
+  "post": {
+   "schedulingType": "automatic",
+   "mode": "customScheduled",
+   "needsApproval": false,
+   "dueAt": "2026-11-05T17:15:00.000Z",
+   "text": "A four card soulmate tarot spread for the question you keep asking: who is my soulmate? Save it, pull your cards tonight, and tap to see a charcoal portrait of the person your cards describe. Soulmate reading, soulmate drawing, love tarot spread. For entertainment and personal reflection.",
+   "assets": [
+    {
+     "image": {
+      "url": "https://faficka.github.io/tl-media/pi/sm_P01.jpg",
+      "metadata": {
+       "altText": "Who Is My Soulmate? 4 Card Soulmate Tarot Spread"
+      }
+     }
+    }
+   ],
+   "metadata": {
+    "pinterest": {
+     "title": "Who Is My Soulmate? 4 Card Soulmate Tarot Spread",
+     "url": "https://www.talialatour.com/soulmate?utm_source=pinterest&utm_medium=pin&utm_campaign=soulmate10&utm_content=p01"
+    }
+   }
+  }
+ },
+ {
   "due": "2026-11-05T18:00:00.000Z",
   "service": "pinterest",
   "label": "2026-11-05 13:00 ET pin Cups04_rev.jpg",
@@ -4258,6 +4287,35 @@
     "pinterest": {
      "title": "King of Cups in Love: Tarot Meaning + Yes or No (Yes)",
      "url": ""
+    }
+   }
+  }
+ },
+ {
+  "due": "2026-11-06T17:15:00.000Z",
+  "service": "pinterest",
+  "label": "2026-11-06 12:15 ET pin sm_P07",
+  "board": "Soulmate Reading",
+  "post": {
+   "schedulingType": "automatic",
+   "mode": "customScheduled",
+   "needsApproval": false,
+   "dueAt": "2026-11-06T17:15:00.000Z",
+   "text": "How do you know if you have already met your soulmate? Six signs to save and check: familiar on day one, easy silence, terrible timing and more. Then tap for a free one card love reading. Soulmate signs, how to know your soulmate, love tarot. For entertainment and personal reflection.",
+   "assets": [
+    {
+     "image": {
+      "url": "https://faficka.github.io/tl-media/pi/sm_P07.jpg",
+      "metadata": {
+       "altText": "6 Signs You May Have Already Met Your Soulmate"
+      }
+     }
+    }
+   ],
+   "metadata": {
+    "pinterest": {
+     "title": "6 Signs You May Have Already Met Your Soulmate",
+     "url": "https://www.talialatour.com/soulmate?utm_source=pinterest&utm_medium=pin&utm_campaign=soulmate10&utm_content=p07"
     }
    }
   }
@@ -4553,6 +4611,35 @@
   }
  },
  {
+  "due": "2026-11-07T17:15:00.000Z",
+  "service": "pinterest",
+  "label": "2026-11-07 12:15 ET pin sm_P08",
+  "board": "Twin Flame",
+  "post": {
+   "schedulingType": "automatic",
+   "mode": "customScheduled",
+   "needsApproval": false,
+   "dueAt": "2026-11-07T17:15:00.000Z",
+   "text": "Soulmate, twin flame or karmic relationship? A simple chart to save: how each one starts, feels, fights and what it leaves you with. Then tap to see a charcoal portrait of the person your cards describe. Twin flame signs, karmic relationship signs. For entertainment and personal reflection.",
+   "assets": [
+    {
+     "image": {
+      "url": "https://faficka.github.io/tl-media/pi/sm_P08.jpg",
+      "metadata": {
+       "altText": "Soulmate vs Twin Flame vs Karmic: How to Tell the Difference"
+      }
+     }
+    }
+   ],
+   "metadata": {
+    "pinterest": {
+     "title": "Soulmate vs Twin Flame vs Karmic: How to Tell the Difference",
+     "url": "https://www.talialatour.com/soulmate?utm_source=pinterest&utm_medium=pin&utm_campaign=soulmate10&utm_content=p08"
+    }
+   }
+  }
+ },
+ {
   "due": "2026-11-07T18:00:00.000Z",
   "service": "pinterest",
   "label": "2026-11-07 13:00 ET pin Wands03_partner.jpg",
@@ -4838,6 +4925,35 @@
     "pinterest": {
      "title": "The Lovers in Love: Tarot Meaning + Yes or No (Yes)",
      "url": ""
+    }
+   }
+  }
+ },
+ {
+  "due": "2026-11-08T17:15:00.000Z",
+  "service": "pinterest",
+  "label": "2026-11-08 12:15 ET pin sm_P05",
+  "board": "Soulmate Reading",
+  "post": {
+   "schedulingType": "automatic",
+   "mode": "customScheduled",
+   "needsApproval": false,
+   "dueAt": "2026-11-08T17:15:00.000Z",
+   "text": "Who does each zodiac sign fall for? A blunt list for all 12 signs, Aries to Pisces. Save it, send it to your group chat, then tap for a free one card love reading. Zodiac love, zodiac signs in love, soulmate by zodiac sign. For entertainment and personal reflection.",
+   "assets": [
+    {
+     "image": {
+      "url": "https://faficka.github.io/tl-media/pi/sm_P05.jpg",
+      "metadata": {
+       "altText": "Who You Fall For, By Zodiac Sign"
+      }
+     }
+    }
+   ],
+   "metadata": {
+    "pinterest": {
+     "title": "Who You Fall For, By Zodiac Sign",
+     "url": "https://www.talialatour.com/soulmate?utm_source=pinterest&utm_medium=pin&utm_campaign=soulmate10&utm_content=p05"
     }
    }
   }
@@ -5133,6 +5249,35 @@
   }
  },
  {
+  "due": "2026-11-09T17:15:00.000Z",
+  "service": "pinterest",
+  "label": "2026-11-09 12:15 ET pin sm_P02",
+  "board": "Love Reading",
+  "post": {
+   "schedulingType": "automatic",
+   "mode": "customScheduled",
+   "needsApproval": false,
+   "dueAt": "2026-11-09T17:15:00.000Z",
+   "text": "Same person, different name? This three card love tarot spread looks at what you keep falling for, what you are avoiding and what you actually need. Save it for your next pull, then tap for a free one card love reading. Love tarot spread, relationship patterns. For entertainment and personal reflection.",
+   "assets": [
+    {
+     "image": {
+      "url": "https://faficka.github.io/tl-media/pi/sm_P02.jpg",
+      "metadata": {
+       "altText": "Why Do I Keep Choosing the Wrong Person? 3 Card Love Tarot Spread"
+      }
+     }
+    }
+   ],
+   "metadata": {
+    "pinterest": {
+     "title": "Why Do I Keep Choosing the Wrong Person? 3 Card Love Tarot Spread",
+     "url": "https://www.talialatour.com/soulmate?utm_source=pinterest&utm_medium=pin&utm_campaign=soulmate10&utm_content=p02"
+    }
+   }
+  }
+ },
+ {
   "due": "2026-11-09T18:00:00.000Z",
   "service": "pinterest",
   "label": "2026-11-09 13:00 ET pin M09_Hermit_feel.jpg",
@@ -5423,6 +5568,35 @@
   }
  },
  {
+  "due": "2026-11-10T17:15:00.000Z",
+  "service": "pinterest",
+  "label": "2026-11-10 12:15 ET pin sm_P10",
+  "board": "Tarot Reading",
+  "post": {
+   "schedulingType": "automatic",
+   "mode": "customScheduled",
+   "needsApproval": false,
+   "dueAt": "2026-11-10T17:15:00.000Z",
+   "text": "Not sure what to ask the cards about love? Seven tarot questions about your soulmate that give you more than \"when will I meet them?\". Save them for your next reading, then tap for a free one card love reading. Tarot questions for love, soulmate tarot. For entertainment and personal reflection.",
+   "assets": [
+    {
+     "image": {
+      "url": "https://faficka.github.io/tl-media/pi/sm_P10.jpg",
+      "metadata": {
+       "altText": "7 Questions to Ask Tarot About Your Soulmate"
+      }
+     }
+    }
+   ],
+   "metadata": {
+    "pinterest": {
+     "title": "7 Questions to Ask Tarot About Your Soulmate",
+     "url": "https://www.talialatour.com/soulmate?utm_source=pinterest&utm_medium=pin&utm_campaign=soulmate10&utm_content=p10"
+    }
+   }
+  }
+ },
+ {
   "due": "2026-11-10T18:00:00.000Z",
   "service": "pinterest",
   "label": "2026-11-10 13:00 ET pin Wands06_partner.jpg",
@@ -5708,6 +5882,35 @@
     "pinterest": {
      "title": "Page of Pentacles in Love: Tarot Meaning + Yes or No (Yes)",
      "url": ""
+    }
+   }
+  }
+ },
+ {
+  "due": "2026-11-11T17:15:00.000Z",
+  "service": "pinterest",
+  "label": "2026-11-11 12:15 ET pin sm_P09",
+  "board": "Soulmate Reading",
+  "post": {
+   "schedulingType": "automatic",
+   "mode": "customScheduled",
+   "needsApproval": false,
+   "dueAt": "2026-11-11T17:15:00.000Z",
+   "text": "If you could see a portrait of your future husband or wife today, would you look? A charcoal portrait of the person your tarot cards describe, with a photo of your real spread. Sample shown. Soulmate drawing, future husband drawing, future spouse tarot. From $37. For entertainment and personal reflection.",
+   "assets": [
+    {
+     "image": {
+      "url": "https://faficka.github.io/tl-media/pi/sm_P09.jpg",
+      "metadata": {
+       "altText": "Future Husband Drawing: Would You Want to See Their Face?"
+      }
+     }
+    }
+   ],
+   "metadata": {
+    "pinterest": {
+     "title": "Future Husband Drawing: Would You Want to See Their Face?",
+     "url": "https://www.talialatour.com/soulmate?utm_source=pinterest&utm_medium=pin&utm_campaign=soulmate10&utm_content=p09"
     }
    }
   }
