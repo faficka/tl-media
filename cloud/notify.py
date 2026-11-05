@@ -9,12 +9,14 @@ State (ids already reported, last summary day) lives in cloud/notify_state.json,
     python3 cloud/notify.py [--dry]
 """
 import datetime as dt
+import html
 import json
 import os
 import sys
 import urllib.error
 import urllib.parse
 import urllib.request
+import uuid
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
@@ -162,6 +164,52 @@ def reminders(state, now, dry):
     state["reminders"] = {k: v for k, v in sent.items() if v >= cutoff[:16]}
 
 
+def tg_call(method, fields, files=()):
+    """Telegram API with multipart upload of local files [(field name, Path)]."""
+    b = uuid.uuid4().hex
+    body = b""
+    for k, v in fields.items():
+        body += f'--{b}\r\nContent-Disposition: form-data; name="{k}"\r\n\r\n{v}\r\n'.encode()
+    for name, path in files:
+        body += (f'--{b}\r\nContent-Disposition: form-data; name="{name}"; filename="{path.name}"\r\n'
+                 f"Content-Type: application/octet-stream\r\n\r\n").encode() + path.read_bytes() + b"\r\n"
+    body += f"--{b}--\r\n".encode()
+    req = urllib.request.Request("https://api.telegram.org/bot" + os.environ["TELEGRAM_TOKEN"] + "/" + method, data=body,
+                                 headers={"Content-Type": f"multipart/form-data; boundary={b}"})
+    urllib.request.urlopen(req, timeout=300)
+
+
+def carousel_packages(state, now, dry):
+    """TikTok carousels she posts herself with a sound (user 5.11.2026): slides in full quality + tap-to-copy caption,
+    sent once within 30 h before the slot (cron gaps can be hours long). cloud/tg_carousel_plan.json."""
+    path = STATE.parent / "tg_carousel_plan.json"
+    if not path.exists():
+        return
+    sent = state.setdefault("tg_carousels", {})
+    chat = os.environ.get("TELEGRAM_CHAT", "")
+    for c in json.loads(path.read_text(encoding="utf-8")):
+        at = dt.datetime.fromisoformat(c["due"].replace("Z", "+00:00"))
+        if c["id"] in sent or at <= now or at - now > dt.timedelta(hours=30):
+            continue
+        files = [STATE.parent.parent / "c" / n for n in c["images"]]
+        if dry:
+            print("--- package", c["id"], c["when"], len(files), "slides")
+            continue
+        tg_call("sendMessage", {"chat_id": chat, "parse_mode": "HTML", "text":
+                f"📦 <b>Talia: carousel na TikTok</b> ({html.escape(c['id'])})\nZveřejnit: <b>{c['when']}</b> (přidej zvuk)\n"
+                "Fotky v plné kvalitě jsou níže, popisek pod nimi zkopíruješ klepnutím."})
+        for i in range(0, len(files), 10):
+            chunk = files[i:i + 10]
+            media = [{"type": "document", "media": f"attach://f{k}"} for k in range(len(chunk))]
+            if len(chunk) == 1:
+                tg_call("sendDocument", {"chat_id": chat}, [("document", chunk[0])])
+            else:
+                tg_call("sendMediaGroup", {"chat_id": chat, "media": json.dumps(media)},
+                        [(f"f{k}", p) for k, p in enumerate(chunk)])
+        tg_call("sendMessage", {"chat_id": chat, "parse_mode": "HTML", "text": f"<pre>{html.escape(c['caption'])[:3900]}</pre>"})
+        sent[c["id"]] = c["due"]
+
+
 def main(dry):
     state = json.loads(STATE.read_text(encoding="utf-8")) if STATE.exists() else {}
     first_run = not state
@@ -179,6 +227,10 @@ def main(dry):
             send(text, dry)
         done[p["id"]] = p["dueAt"]
     reminders(state, now, dry)
+    try:
+        carousel_packages(state, now, dry)
+    except Exception as e:  # never lose the post notifications because of a package
+        send(f"❌ Balíček carouselu se neposlal: {e}", dry)
     today = now.astimezone(PRAGUE)
     if today.hour >= 8 and state.get("summary") != today.date().isoformat():
         warn = runway(found, now)
