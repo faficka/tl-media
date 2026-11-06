@@ -516,31 +516,6 @@
   }
  },
  {
-  "due": "2026-11-06T15:00:00.000Z",
-  "service": "instagram",
-  "label": "2026-11-06 16:00 Prague video from carousel y27new_sagittarius",
-  "post": {
-   "schedulingType": "automatic",
-   "mode": "customScheduled",
-   "needsApproval": false,
-   "dueAt": "2026-11-06T15:00:00.000Z",
-   "text": "Sagittarius 2027 horoscope ♐ Your year has two chapters: expanding your world, then giving that growth a direction.\n\nJupiter moves from Leo into Virgo on July 26, shifting the focus from exploration toward career and visibility.\n\nType YES to claim this energy.\n\nRead for Sagittarius rising first; Sagittarius Sun as a broader reflection. General astrology, not a personal prediction.\n\n#Sagittarius #Sagittarius2027 #2027Horoscope #Astrology",
-   "assets": [
-    {
-     "video": {
-      "url": "https://faficka.github.io/tl-media/v/cv_y27new_sagittarius.mp4"
-     }
-    }
-   ],
-   "metadata": {
-    "instagram": {
-     "type": "reel",
-     "shouldShareToFeed": true
-    }
-   }
-  }
- },
- {
   "due": "2026-11-06T17:00:00.000Z",
   "service": "instagram",
   "label": "2026-11-06 18:00 Prague video from carousel love_06_aries",
@@ -554,31 +529,6 @@
     {
      "video": {
       "url": "https://faficka.github.io/tl-media/v/cv_love_06_aries.mp4"
-     }
-    }
-   ],
-   "metadata": {
-    "instagram": {
-     "type": "reel",
-     "shouldShareToFeed": true
-    }
-   }
-  }
- },
- {
-  "due": "2026-11-07T15:00:00.000Z",
-  "service": "instagram",
-  "label": "2026-11-07 16:00 Prague video from carousel y27new_aquarius",
-  "post": {
-   "schedulingType": "automatic",
-   "mode": "customScheduled",
-   "needsApproval": false,
-   "dueAt": "2026-11-07T15:00:00.000Z",
-   "text": "Aquarius 2027 horoscope ♒ Identity, relationships and trust are the themes to watch.\n\nThe Aquarius–Leo eclipses bring a symbolic focus to the balance between “me” and “we,” while Jupiter changes signs on July 26.\n\nType YES to claim this energy.\n\nRead for Aquarius rising first; Aquarius Sun as a broader reflection. General astrology, not a personal prediction.\n\n#Aquarius #Aquarius2027 #2027Horoscope #Astrology",
-   "assets": [
-    {
-     "video": {
-      "url": "https://faficka.github.io/tl-media/v/cv_y27new_aquarius.mp4"
      }
     }
    ],

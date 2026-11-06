@@ -1404,6 +1404,94 @@
   }
  },
  {
+  "due": "2026-11-07T01:00:00.000Z",
+  "service": "instagram",
+  "label": "2026-11-07 02:00 Prague viraltest V3a",
+  "post": {
+   "schedulingType": "automatic",
+   "mode": "customScheduled",
+   "needsApproval": false,
+   "dueAt": "2026-11-07T01:00:00.000Z",
+   "text": "Pick 1, 2 or 3 before you watch 🔮 Which one was yours?\n\nComment your number and send this to the friend who keeps checking his stories 👀\n\n#pickacard #tarot #lovetarot #tarotreading #lovereading",
+   "assets": [
+    {
+     "video": {
+      "url": "https://faficka.github.io/tl-media/v/VT_V3a.mp4"
+     }
+    }
+   ],
+   "metadata": {
+    "instagram": {
+     "type": "reel",
+     "shouldShareToFeed": true
+    }
+   }
+  }
+ },
+ {
+  "due": "2026-11-07T01:00:00.000Z",
+  "service": "tiktok",
+  "label": "2026-11-07 02:00 Prague viraltest V3a",
+  "post": {
+   "schedulingType": "automatic",
+   "mode": "customScheduled",
+   "needsApproval": false,
+   "dueAt": "2026-11-07T01:00:00.000Z",
+   "text": "Pick 1, 2 or 3 before you watch 🔮 Which one was yours?\n\nComment your number and send this to the friend who keeps checking his stories 👀\n\n#pickacard #tarot #lovetarot #tarotreading #lovereading",
+   "assets": [
+    {
+     "video": {
+      "url": "https://faficka.github.io/tl-media/v/VT_V3a.mp4"
+     }
+    }
+   ]
+  }
+ },
+ {
+  "due": "2026-11-07T13:00:00.000Z",
+  "service": "instagram",
+  "label": "2026-11-07 14:00 Prague viraltest V1a",
+  "post": {
+   "schedulingType": "automatic",
+   "mode": "customScheduled",
+   "needsApproval": false,
+   "dueAt": "2026-11-07T13:00:00.000Z",
+   "text": "Scorpios, which one is the MOST you? Be honest 🦂\n\nSend this to the Scorpio in your life and watch them deny all of it 👀\n\n#scorpio #scorpioseason #zodiacsigns #astrology #scorpiolove",
+   "assets": [
+    {
+     "video": {
+      "url": "https://faficka.github.io/tl-media/v/VT_V1a.mp4"
+     }
+    }
+   ],
+   "metadata": {
+    "instagram": {
+     "type": "reel",
+     "shouldShareToFeed": true
+    }
+   }
+  }
+ },
+ {
+  "due": "2026-11-07T13:00:00.000Z",
+  "service": "tiktok",
+  "label": "2026-11-07 14:00 Prague viraltest V1a",
+  "post": {
+   "schedulingType": "automatic",
+   "mode": "customScheduled",
+   "needsApproval": false,
+   "dueAt": "2026-11-07T13:00:00.000Z",
+   "text": "Scorpios, which one is the MOST you? Be honest 🦂\n\nSend this to the Scorpio in your life and watch them deny all of it 👀\n\n#scorpio #scorpioseason #zodiacsigns #astrology #scorpiolove",
+   "assets": [
+    {
+     "video": {
+      "url": "https://faficka.github.io/tl-media/v/VT_V1a.mp4"
+     }
+    }
+   ]
+  }
+ },
+ {
   "due": "2026-11-07T21:00:00.000Z",
   "service": "instagram",
   "label": "2026-11-07 16:00 ET video T13_virgo_libra_aquarius",
@@ -1442,6 +1530,94 @@
     {
      "video": {
       "url": "https://faficka.github.io/tl-media/v/T13_virgo_libra_aquarius.mp4"
+     }
+    }
+   ]
+  }
+ },
+ {
+  "due": "2026-11-08T01:00:00.000Z",
+  "service": "instagram",
+  "label": "2026-11-08 02:00 Prague viraltest V2a",
+  "post": {
+   "schedulingType": "automatic",
+   "mode": "customScheduled",
+   "needsApproval": false,
+   "dueAt": "2026-11-08T01:00:00.000Z",
+   "text": "Where's your sign? 👀 Scorpio, we're sorry (not sorry).\n\nSend this to the friend who is 100 % answering that text.\n\n#zodiacsigns #astrology #exback #scorpio #zodiac",
+   "assets": [
+    {
+     "video": {
+      "url": "https://faficka.github.io/tl-media/v/VT_V2a.mp4"
+     }
+    }
+   ],
+   "metadata": {
+    "instagram": {
+     "type": "reel",
+     "shouldShareToFeed": true
+    }
+   }
+  }
+ },
+ {
+  "due": "2026-11-08T01:00:00.000Z",
+  "service": "tiktok",
+  "label": "2026-11-08 02:00 Prague viraltest V2a",
+  "post": {
+   "schedulingType": "automatic",
+   "mode": "customScheduled",
+   "needsApproval": false,
+   "dueAt": "2026-11-08T01:00:00.000Z",
+   "text": "Where's your sign? 👀 Scorpio, we're sorry (not sorry).\n\nSend this to the friend who is 100 % answering that text.\n\n#zodiacsigns #astrology #exback #scorpio #zodiac",
+   "assets": [
+    {
+     "video": {
+      "url": "https://faficka.github.io/tl-media/v/VT_V2a.mp4"
+     }
+    }
+   ]
+  }
+ },
+ {
+  "due": "2026-11-08T13:00:00.000Z",
+  "service": "instagram",
+  "label": "2026-11-08 14:00 Prague viraltest V4b",
+  "post": {
+   "schedulingType": "automatic",
+   "mode": "customScheduled",
+   "needsApproval": false,
+   "dueAt": "2026-11-08T13:00:00.000Z",
+   "text": "Did you already meet yours? 💖\n\nSend this to your soulmate sign (you know who) 👀 Want to see their face? Soulmate sketch → link in bio\n\n#soulmate #zodiaccompatibility #zodiacsigns #astrology #twinflame",
+   "assets": [
+    {
+     "video": {
+      "url": "https://faficka.github.io/tl-media/v/VT_V4b.mp4"
+     }
+    }
+   ],
+   "metadata": {
+    "instagram": {
+     "type": "reel",
+     "shouldShareToFeed": true
+    }
+   }
+  }
+ },
+ {
+  "due": "2026-11-08T13:00:00.000Z",
+  "service": "tiktok",
+  "label": "2026-11-08 14:00 Prague viraltest V4b",
+  "post": {
+   "schedulingType": "automatic",
+   "mode": "customScheduled",
+   "needsApproval": false,
+   "dueAt": "2026-11-08T13:00:00.000Z",
+   "text": "Did you already meet yours? 💖\n\nSend this to your soulmate sign (you know who) 👀 Want to see their face? Soulmate sketch → link in bio\n\n#soulmate #zodiaccompatibility #zodiacsigns #astrology #twinflame",
+   "assets": [
+    {
+     "video": {
+      "url": "https://faficka.github.io/tl-media/v/VT_V4b.mp4"
      }
     }
    ]
@@ -1492,6 +1668,94 @@
   }
  },
  {
+  "due": "2026-11-09T01:00:00.000Z",
+  "service": "instagram",
+  "label": "2026-11-09 02:00 Prague viraltest V3b",
+  "post": {
+   "schedulingType": "automatic",
+   "mode": "customScheduled",
+   "needsApproval": false,
+   "dueAt": "2026-11-09T01:00:00.000Z",
+   "text": "Pick 1, 2 or 3 🔮 Your next love is already on the way.\n\nComment your number and send this to the single friend who needs it 💖\n\n#pickacard #tarot #lovetarot #soulmate #tarotreading",
+   "assets": [
+    {
+     "video": {
+      "url": "https://faficka.github.io/tl-media/v/VT_V3b.mp4"
+     }
+    }
+   ],
+   "metadata": {
+    "instagram": {
+     "type": "reel",
+     "shouldShareToFeed": true
+    }
+   }
+  }
+ },
+ {
+  "due": "2026-11-09T01:00:00.000Z",
+  "service": "tiktok",
+  "label": "2026-11-09 02:00 Prague viraltest V3b",
+  "post": {
+   "schedulingType": "automatic",
+   "mode": "customScheduled",
+   "needsApproval": false,
+   "dueAt": "2026-11-09T01:00:00.000Z",
+   "text": "Pick 1, 2 or 3 🔮 Your next love is already on the way.\n\nComment your number and send this to the single friend who needs it 💖\n\n#pickacard #tarot #lovetarot #soulmate #tarotreading",
+   "assets": [
+    {
+     "video": {
+      "url": "https://faficka.github.io/tl-media/v/VT_V3b.mp4"
+     }
+    }
+   ]
+  }
+ },
+ {
+  "due": "2026-11-09T13:00:00.000Z",
+  "service": "instagram",
+  "label": "2026-11-09 14:00 Prague viraltest V1b",
+  "post": {
+   "schedulingType": "automatic",
+   "mode": "customScheduled",
+   "needsApproval": false,
+   "dueAt": "2026-11-09T13:00:00.000Z",
+   "text": "Sagittarius, which one hit too close? 🏹\n\nSend this to the Sagittarius who will never admit it 👀\n\n#sagittarius #sagittariusseason #zodiacsigns #astrology #sagittariuslove",
+   "assets": [
+    {
+     "video": {
+      "url": "https://faficka.github.io/tl-media/v/VT_V1b.mp4"
+     }
+    }
+   ],
+   "metadata": {
+    "instagram": {
+     "type": "reel",
+     "shouldShareToFeed": true
+    }
+   }
+  }
+ },
+ {
+  "due": "2026-11-09T13:00:00.000Z",
+  "service": "tiktok",
+  "label": "2026-11-09 14:00 Prague viraltest V1b",
+  "post": {
+   "schedulingType": "automatic",
+   "mode": "customScheduled",
+   "needsApproval": false,
+   "dueAt": "2026-11-09T13:00:00.000Z",
+   "text": "Sagittarius, which one hit too close? 🏹\n\nSend this to the Sagittarius who will never admit it 👀\n\n#sagittarius #sagittariusseason #zodiacsigns #astrology #sagittariuslove",
+   "assets": [
+    {
+     "video": {
+      "url": "https://faficka.github.io/tl-media/v/VT_V1b.mp4"
+     }
+    }
+   ]
+  }
+ },
+ {
   "due": "2026-11-09T21:00:00.000Z",
   "service": "instagram",
   "label": "2026-11-09 16:00 ET video T15_leo_libra_pisces",
@@ -1530,6 +1794,94 @@
     {
      "video": {
       "url": "https://faficka.github.io/tl-media/v/T15_leo_libra_pisces.mp4"
+     }
+    }
+   ]
+  }
+ },
+ {
+  "due": "2026-11-10T01:00:00.000Z",
+  "service": "instagram",
+  "label": "2026-11-10 02:00 Prague viraltest V2b",
+  "post": {
+   "schedulingType": "automatic",
+   "mode": "customScheduled",
+   "needsApproval": false,
+   "dueAt": "2026-11-10T01:00:00.000Z",
+   "text": "Is your sign too high or too low? Fight me in the comments 👇\n\nSend this to the Pisces who fell for you in one day 🌊\n\n#zodiacsigns #astrology #pisces #zodiaclove #zodiac",
+   "assets": [
+    {
+     "video": {
+      "url": "https://faficka.github.io/tl-media/v/VT_V2b.mp4"
+     }
+    }
+   ],
+   "metadata": {
+    "instagram": {
+     "type": "reel",
+     "shouldShareToFeed": true
+    }
+   }
+  }
+ },
+ {
+  "due": "2026-11-10T01:00:00.000Z",
+  "service": "tiktok",
+  "label": "2026-11-10 02:00 Prague viraltest V2b",
+  "post": {
+   "schedulingType": "automatic",
+   "mode": "customScheduled",
+   "needsApproval": false,
+   "dueAt": "2026-11-10T01:00:00.000Z",
+   "text": "Is your sign too high or too low? Fight me in the comments 👇\n\nSend this to the Pisces who fell for you in one day 🌊\n\n#zodiacsigns #astrology #pisces #zodiaclove #zodiac",
+   "assets": [
+    {
+     "video": {
+      "url": "https://faficka.github.io/tl-media/v/VT_V2b.mp4"
+     }
+    }
+   ]
+  }
+ },
+ {
+  "due": "2026-11-10T13:00:00.000Z",
+  "service": "instagram",
+  "label": "2026-11-10 14:00 Prague viraltest V4a",
+  "post": {
+   "schedulingType": "automatic",
+   "mode": "customScheduled",
+   "needsApproval": false,
+   "dueAt": "2026-11-10T13:00:00.000Z",
+   "text": "Forever or one week? Be honest 👀\n\nSend this to your person and see what they say 💖\n\n#zodiaccompatibility #zodiacsigns #astrology #zodiaclove #soulmate",
+   "assets": [
+    {
+     "video": {
+      "url": "https://faficka.github.io/tl-media/v/VT_V4a.mp4"
+     }
+    }
+   ],
+   "metadata": {
+    "instagram": {
+     "type": "reel",
+     "shouldShareToFeed": true
+    }
+   }
+  }
+ },
+ {
+  "due": "2026-11-10T13:00:00.000Z",
+  "service": "tiktok",
+  "label": "2026-11-10 14:00 Prague viraltest V4a",
+  "post": {
+   "schedulingType": "automatic",
+   "mode": "customScheduled",
+   "needsApproval": false,
+   "dueAt": "2026-11-10T13:00:00.000Z",
+   "text": "Forever or one week? Be honest 👀\n\nSend this to your person and see what they say 💖\n\n#zodiaccompatibility #zodiacsigns #astrology #zodiaclove #soulmate",
+   "assets": [
+    {
+     "video": {
+      "url": "https://faficka.github.io/tl-media/v/VT_V4a.mp4"
      }
     }
    ]
