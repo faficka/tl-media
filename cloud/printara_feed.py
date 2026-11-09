@@ -4,6 +4,8 @@ Run: python -I build_marketplace_feed.py -> google_feed_marketplace.tsv"""
 import csv, json, os, re, urllib.request, concurrent.futures as cf
 OUT = os.environ.get("FEED_OUT") or os.path.dirname(os.path.abspath(__file__))
 os.makedirs(OUT, exist_ok=True)
+# Third-party franchises and trademarks: Google treats them as counterfeit/IP risk, which can suspend the whole account.
+EXCLUDE_IP = re.compile(r"""lord of the rings|\blotr\b|esdla|tolkien|hobbit|\bfrodo\b|gandalf|sauron|\bazog\b|gollum|aragorn|legolas|galadriel|celeborn|nazg[uû]l|gil.?galad|bilbo|faramir|radagast|bofur|merry and pippin|mordor|gondor|one piece|pok[eé]mon|gengar|pikachu|witcher|peter griffin|space marine|terminator|alien predator|xenomorph|diablo|ac/dc|angus young|ghostface|\bjoker\b|clown prince|fan art|fan sculpt|fanart|star wars|marvel|disney|harry potter|warhammer|nintendo|zelda|super mario|batman|spider-?man|stranger things|game of thrones""", re.I)
 MIN_ROWS = int(os.environ.get("FEED_MIN_ROWS", "0"))
 UA = {"User-Agent": "printara-feed-builder"}
 def get(u): return urllib.request.urlopen(urllib.request.Request(u, headers=UA), timeout=40).read().decode("utf-8", "replace")
@@ -31,6 +33,7 @@ with cf.ThreadPoolExecutor(8) as ex:
         if not imgs: bad.append(("NOIMG", u, "")); continue
         seller = (o.get("seller") or {}).get("name", "")
         title = re.sub(r"\s+", " ", d["name"]).strip()
+        if EXCLUDE_IP.search(title) or EXCLUDE_IP.search(d.get("description") or ""): bad.append(("IP_EXCLUDED", u, title)); continue
         desc = re.sub(r"\s+", " ", d.get("description") or title).strip()
         desc = f"Digital download (3D printable file) sold on the Printara marketplace{' by ' + seller if seller else ''}. {desc}"
         rows.append([d.get("sku") or u.rsplit("-", 5)[-5:], title[:150], desc[:5000], u, imgs[0], ",".join(imgs[1:10]),
