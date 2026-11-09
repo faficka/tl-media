@@ -32,7 +32,7 @@ with cf.ThreadPoolExecutor(8) as ex:
         seller = (o.get("seller") or {}).get("name", "")
         title = re.sub(r"\s+", " ", d["name"]).strip()
         desc = re.sub(r"\s+", " ", d.get("description") or title).strip()
-        desc = f"Digital download (3D printable file) sold on the Printara marketplace{" by " + seller if seller else ""}. {desc}"
+        desc = f"Digital download (3D printable file) sold on the Printara marketplace{' by ' + seller if seller else ''}. {desc}"
         rows.append([d.get("sku") or u.rsplit("-", 5)[-5:], title[:150], desc[:5000], u, imgs[0], ",".join(imgs[1:10]),
                      f"{price:.2f} {o.get('priceCurrency','USD')}", "in_stock", "new", "Printara", "no",
                      "Toys & Games > Toys > Model Building Kits", "digital_download", seller, "US:::0.00 USD", "no"])
