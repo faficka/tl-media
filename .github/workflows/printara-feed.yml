@@ -1,0 +1,25 @@
+name: printara-feed
+# Rebuilds the Google Merchant Center feed of printara.co marketplace models once a day,
+# before Merchant Center fetches printara/feed/google_feed_marketplace.tsv.
+on:
+  schedule:
+    - cron: "15 21 * * *"
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: printara-feed
+jobs:
+  feed:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 cloud/printara_feed.py
+        env:
+          FEED_OUT: printara/feed
+          FEED_MIN_ROWS: "300"
+      - run: |
+          git config user.name faficka
+          git config user.email faficka@users.noreply.github.com
+          git add printara/feed/google_feed_marketplace.tsv
+          git diff --cached --quiet || (git commit -m "printara feed $(date -u +%F)" && git pull --rebase && git push)
