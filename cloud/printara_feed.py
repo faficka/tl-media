@@ -7,6 +7,11 @@ os.makedirs(OUT, exist_ok=True)
 # Third-party franchises and trademarks: Google treats them as counterfeit/IP risk, which can suspend the whole account.
 EXCLUDE_IP = re.compile(r"""lord of the rings|\blotr\b|esdla|tolkien|hobbit|\bfrodo\b|gandalf|sauron|\bazog\b|gollum|aragorn|legolas|galadriel|celeborn|nazg[uû]l|gil.?galad|bilbo|faramir|radagast|bofur|merry and pippin|mordor|gondor|one piece|pok[eé]mon|gengar|pikachu|witcher|peter griffin|space marine|terminator|alien predator|xenomorph|diablo|ac/dc|angus young|ghostface|\bjoker\b|clown prince|fan art|fan sculpt|fanart|star wars|marvel|disney|harry potter|warhammer|nintendo|zelda|super mario|batman|spider-?man|stranger things|game of thrones|heavily inspired by|strongly inspired by|directly inspired by|inspired by the (?:most )?iconic|inspired by the legendary|middle.?earth|prancing pony|ring bearer|\bdunes?\s*-|atreides|artreides|irulan|\bchani|rabban|fenring|mk scorpion|mortal kombat|sub.?zero|davy jones|ghost of sparta|kratos|god of war|night he came home|michael myers|chainsaw slasher|leatherface|texas chainsaw|jurassic|paddock|maximus|gladiator general|resident evil|dimitrescu|colonial marine|bug hunter|messi|lamine yamal|mustaine|mccartney|beatles|biggie|notorious b|valentino rossi|racing legend|metallica|cliff burton|kurt cobain|haaland|mbapp|ronaldo|cr7|schwarzenegger|king of pop|michael jackson|thriller|smooth criminal|prince of darkness|ozzy|45th us president|trump|irish rock legend|rock legend vocalist|west coast rap|reggae legend|glam rock|starman|freddie|bowie|tupac|bob marley|bono|hockey mask|camp blood|camp slasher|crystal lake|ghost mask|ghostface|sewer clown|time to float|pennywise|playtime is over|miss me possessed|someone.s always watching|no one escapes|beetlejuice|hocus pocus|sanderson|birmingham gangster|peaky|godfather|mob boss|tulsa|bio.?mutant nemesis|ultimate weapon|the mask movie|green anti.?hero|xeno.?terror|sandworm|desert leviathan|shadow of the island|tsushima|fungal mutant|cordyceps|last of us|horror slasher movie|mystery solving team|scooby|bedrock|flintstone|yabba|dabba|detective rabbit|noir investigator|cartoon rabbit|sun.kissed savior|baywatch|yellow square cartoon|spongebob|cheese enthusiast|wallace|\bkcd\b|kingdom come""", re.I)
 MIN_ROWS = int(os.environ.get("FEED_MIN_ROWS", "0"))
+# Feed images: files.printara.co serves big PNGs (and JPEGs named .png with image/png), Microsoft MC rejected ~200
+# with "image URL issue". When FEED_IMG_DIR is set, each main image is re-encoded once to a real JPEG
+# (max 1200 px, ~100-300 kB) in that folder (branch printara-img) and the feed links to raw.githubusercontent.
+IMG_DIR = os.environ.get("FEED_IMG_DIR")
+IMG_BASE = os.environ.get("FEED_IMG_BASE", "https://raw.githubusercontent.com/faficka/tl-media/printara-img/")
 UA = {"User-Agent": "printara-feed-builder"}
 def get(u): return urllib.request.urlopen(urllib.request.Request(u, headers=UA), timeout=40).read().decode("utf-8", "replace")
 urls = re.findall(r"<loc>([^<]+)</loc>", get("https://printara.co/sitemap-models.xml"))
@@ -39,6 +44,29 @@ with cf.ThreadPoolExecutor(8) as ex:
         rows.append([d.get("sku") or u.rsplit("-", 5)[-5:], title[:150], desc[:5000], u, imgs[0], ",".join(imgs[1:10]),
                      f"{price:.2f} {o.get('priceCurrency','USD')}", "in_stock", "new", "Printara", "no",
                      "Toys & Games > Toys > Model Building Kits", "digital_download", seller, "US:::0.00 USD", "no"])
+def jpg(src):
+    import hashlib, io
+    name = hashlib.sha1(src.encode()).hexdigest()[:20] + ".jpg"
+    path = os.path.join(IMG_DIR, name)
+    if not os.path.exists(path):
+        from PIL import Image
+        raw = urllib.request.urlopen(urllib.request.Request(src, headers={"User-Agent": "Mozilla/5.0 printara-feed-builder"}), timeout=60).read()
+        im = Image.open(io.BytesIO(raw))
+        if im.mode in ("RGBA", "LA", "P"):
+            im = im.convert("RGBA"); bg = Image.new("RGB", im.size, (255, 255, 255)); bg.paste(im, mask=im.split()[-1]); im = bg
+        im = im.convert("RGB"); im.thumbnail((1200, 1200), Image.LANCZOS)
+        im.save(path, "JPEG", quality=84, optimize=True, progressive=True)
+    return IMG_BASE + name
+if IMG_DIR:
+    os.makedirs(IMG_DIR, exist_ok=True)
+    def fix(r):
+        try: r[4] = jpg(r[4])
+        except Exception as e: print("IMG_FAIL", r[3], e)
+        return r
+    with cf.ThreadPoolExecutor(8) as ex: rows = list(ex.map(fix, rows))
+    keep = {r[4].rsplit("/", 1)[-1] for r in rows}
+    for f in os.listdir(IMG_DIR):
+        if f.endswith(".jpg") and f not in keep: os.remove(os.path.join(IMG_DIR, f))
 if len(rows) < MIN_ROWS:
     raise SystemExit(f"only {len(rows)} rows (< {MIN_ROWS}), keeping the old feed")
 head = ["id","title","description","link","image_link","additional_image_link","price","availability","condition","brand","identifier_exists","google_product_category","custom_label_0","custom_label_1","shipping","adult"]

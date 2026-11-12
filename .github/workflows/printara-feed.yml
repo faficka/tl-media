@@ -1,6 +1,7 @@
 name: printara-feed
 # Rebuilds the Google Merchant Center feed of printara.co marketplace models once a day,
 # before Merchant Center fetches printara/feed/google_feed_marketplace.tsv.
+# Feed images are re-encoded to small JPEGs on branch printara-img (not part of the Pages build).
 on:
   schedule:
     - cron: "15 21 * * *"
@@ -14,12 +15,22 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          ref: printara-img
+          path: imgbranch
+      - run: pip install pillow
       - run: python3 cloud/printara_feed.py
         env:
           FEED_OUT: printara/feed
           FEED_MIN_ROWS: "300"
+          FEED_IMG_DIR: imgbranch
       - run: |
-          git config user.name faficka
-          git config user.email faficka@users.noreply.github.com
+          git config --global user.name faficka
+          git config --global user.email faficka@users.noreply.github.com
+          cd imgbranch
+          git add -A .
+          git diff --cached --quiet || (git commit -m "printara feed images $(date -u +%F)" && git push)
+      - run: |
           git add printara/feed/google_feed_marketplace.tsv
           git diff --cached --quiet || (git commit -m "printara feed $(date -u +%F)" && git pull --rebase && git push)
