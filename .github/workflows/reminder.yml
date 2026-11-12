@@ -1,0 +1,19 @@
+name: reminder
+# One-off Telegram reminders (date-checked, so the yearly cron does nothing in other years).
+on:
+  schedule:
+    - cron: "0 7 13 11 *"
+  workflow_dispatch:
+jobs:
+  remind:
+    runs-on: ubuntu-latest
+    steps:
+      - env:
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_CHAT: ${{ secrets.TELEGRAM_CHAT }}
+        run: |
+          [ "$(date -u +%F)" = "2026-11-13" ] || exit 0
+          MSG="📌 Připomínka na dnes (13.11.):
+          1) Projít návrhy odpovědí tvůrcům (Plocha ODPOVEDI_13_11.html) a dát Claudovi pokyn k odeslání.
+          2) Odepsat CzechInvest (Seidl – portugalská firma, EEN konzultace) – návrh je ve stejném souboru."
+          curl -s -X POST "https://api.telegram.org/bot${TELEGRAM_TOKEN}/sendMessage" --data-urlencode "chat_id=${TELEGRAM_CHAT}" --data-urlencode "text=${MSG}" > /dev/null
