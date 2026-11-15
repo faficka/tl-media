@@ -5,7 +5,7 @@ import csv, json, os, re, urllib.request, concurrent.futures as cf
 OUT = os.environ.get("FEED_OUT") or os.path.dirname(os.path.abspath(__file__))
 os.makedirs(OUT, exist_ok=True)
 # Third-party franchises and trademarks: Google treats them as counterfeit/IP risk, which can suspend the whole account.
-EXCLUDE_IP = re.compile(r"""lord of the rings|\blotr\b|esdla|tolkien|hobbit|\bfrodo\b|gandalf|sauron|\bazog\b|gollum|aragorn|legolas|galadriel|celeborn|nazg[uû]l|gil.?galad|bilbo|faramir|radagast|bofur|merry and pippin|mordor|gondor|one piece|pok[eé]mon|gengar|pikachu|witcher|peter griffin|space marine|terminator|alien predator|xenomorph|diablo|ac/dc|angus young|ghostface|\bjoker\b|clown prince|fan art|fan sculpt|fanart|star wars|marvel|disney|harry potter|warhammer|nintendo|zelda|super mario|batman|spider-?man|stranger things|game of thrones|heavily inspired by|strongly inspired by|directly inspired by|inspired by the (?:most )?iconic|inspired by the legendary|middle.?earth|prancing pony|ring bearer|\bdunes?\s*-|atreides|artreides|irulan|\bchani|rabban|fenring|mk scorpion|mortal kombat|sub.?zero|davy jones|ghost of sparta|kratos|god of war|night he came home|michael myers|chainsaw slasher|leatherface|texas chainsaw|jurassic|paddock|maximus|gladiator general|resident evil|dimitrescu|colonial marine|bug hunter|messi|lamine yamal|mustaine|mccartney|beatles|biggie|notorious b|valentino rossi|racing legend|metallica|cliff burton|kurt cobain|haaland|mbapp|ronaldo|cr7|schwarzenegger|king of pop|michael jackson|thriller|smooth criminal|prince of darkness|ozzy|45th us president|trump|irish rock legend|rock legend vocalist|west coast rap|reggae legend|glam rock|starman|freddie|bowie|tupac|bob marley|bono|hockey mask|camp blood|camp slasher|crystal lake|ghost mask|ghostface|sewer clown|time to float|pennywise|playtime is over|miss me possessed|someone.s always watching|no one escapes|beetlejuice|hocus pocus|sanderson|birmingham gangster|peaky|godfather|mob boss|tulsa|bio.?mutant nemesis|ultimate weapon|the mask movie|green anti.?hero|xeno.?terror|sandworm|desert leviathan|shadow of the island|tsushima|fungal mutant|cordyceps|last of us|horror slasher movie|mystery solving team|scooby|bedrock|flintstone|yabba|dabba|detective rabbit|noir investigator|cartoon rabbit|sun.kissed savior|baywatch|yellow square cartoon|spongebob|cheese enthusiast|wallace|\bkcd\b|kingdom come""", re.I)
+EXCLUDE_IP = re.compile(r"""lord of the rings|\blotr\b|esdla|tolkien|hobbit|\bfrodo\b|gandalf|sauron|\bazog\b|gollum|aragorn|legolas|galadriel|celeborn|nazg[uû]l|gil.?galad|bilbo|faramir|radagast|bofur|merry and pippin|mordor|gondor|one piece|pok[eé]mon|gengar|pikachu|witcher|peter griffin|space marine|terminator|alien predator|xenomorph|diablo|ac/dc|angus young|ghostface|\bjoker\b|clown prince|fan art|fan sculpt|fanart|star wars|marvel|disney|harry potter|warhammer|nintendo|zelda|super mario|batman|spider-?man|stranger things|game of thrones|heavily inspired by|strongly inspired by|directly inspired by|inspired by the (?:most )?iconic|inspired by the legendary|middle.?earth|prancing pony|ring bearer|\bdunes?\s*-|atreides|artreides|irulan|\bchani|rabban|fenring|mk scorpion|mortal kombat|sub.?zero|davy jones|ghost of sparta|kratos|god of war|night he came home|michael myers|chainsaw slasher|leatherface|texas chainsaw|jurassic|paddock|maximus|gladiator general|resident evil|dimitrescu|colonial marine|bug hunter|messi|lamine yamal|mustaine|mccartney|beatles|biggie|notorious b|valentino rossi|racing legend|metallica|cliff burton|kurt cobain|haaland|mbapp|ronaldo|cr7|schwarzenegger|king of pop|michael jackson|thriller|smooth criminal|prince of darkness|ozzy|45th us president|trump|irish rock legend|rock legend vocalist|west coast rap|reggae legend|g?lam rock|stage legend|starman|freddie|bowie|tupac|bob marley|bono|hockey mask|camp blood|camp slasher|crystal lake|ghost mask|ghostface|sewer clown|time to float|pennywise|playtime is over|miss me possessed|someone.s always watching|no one escapes|beetlejuice|hocus pocus|sanderson|birmingham gangster|peaky|godfather|mob boss|tulsa|bio.?mutant nemesis|ultimate weapon|the mask movie|green anti.?hero|xeno.?terror|sandworm|desert leviathan|shadow of the island|tsushima|fungal mutant|cordyceps|last of us|horror slasher movie|mystery solving team|scooby|bedrock|flintstone|yabba|dabba|detective rabbit|noir investigator|cartoon rabbit|sun.kissed savior|baywatch|yellow square cartoon|spongebob|cheese enthusiast|wallace|\bkcd\b|kingdom come""", re.I)
 MIN_ROWS = int(os.environ.get("FEED_MIN_ROWS", "0"))
 # Feed images: files.printara.co serves big PNGs (and JPEGs named .png with image/png), Microsoft MC rejected ~200
 # with "image URL issue". When FEED_IMG_DIR is set, each main image is re-encoded once to a real JPEG
@@ -26,6 +26,24 @@ def one(u):
             if isinstance(o, list): o = o[0]
             return ("OK", u, d, o)
     return ("NOPRODUCT", u, None)
+# Exact paths from the official Google taxonomy (taxonomy-with-ids.en-US.txt). The old value
+# "Toys & Games > Toys > Model Building Kits" is not in the taxonomy -> Pinterest warning 126 on every item.
+CATEGORIES = [
+    (r"ornament|bauble|christmas tree decor", "Home & Garden > Decor > Seasonal & Holiday Decorations > Holiday Ornaments"),
+    (r"\bmask\b|helmet|cosplay", "Apparel & Accessories > Costumes & Accessories > Masks"),
+    (r"key ?chain|key ?ring", "Apparel & Accessories > Handbag & Wallet Accessories > Keychains"),
+    (r"cookie cutter", "Home & Garden > Kitchen & Dining > Kitchen Tools & Utensils > Cookie Cutters"),
+    (r"\bvase\b", "Home & Garden > Decor > Vases"),
+    (r"planter|flower ?pot|\bpot\b", "Home & Garden > Lawn & Garden > Gardening > Pots & Planters"),
+    (r"lamp|lithophane|night ?light|lantern", "Home & Garden > Lighting > Lamps"),
+    (r"bookmark", "Office Supplies > Book Accessories > Bookmarks"),
+    (r"laser|\bsvg\b|\bdxf\b|stencil", "Arts & Entertainment > Hobbies & Creative Arts > Arts & Crafts > Art & Crafting Tools > Craft Measuring & Marking Tools > Stencils & Die Cuts"),
+    (r"figur|statue|bust|sculpt|miniature|\bmini\b|diorama|terrain|28 ?mm|32 ?mm|75 ?mm|tabletop", "Home & Garden > Decor > Figurines"),
+]
+def category(title):
+    for pat, cat in CATEGORIES:
+        if re.search(pat, title, re.I): return cat
+    return "Arts & Entertainment > Hobbies & Creative Arts > Model Making > Scale Model Kits"
 rows, bad = [], []
 with cf.ThreadPoolExecutor(8) as ex:
     for r in ex.map(one, urls):
@@ -43,7 +61,7 @@ with cf.ThreadPoolExecutor(8) as ex:
         desc = f"Digital download (3D printable file) sold on the Printara marketplace{' by ' + seller if seller else ''}. {desc}"
         rows.append([d.get("sku") or u.rsplit("-", 5)[-5:], title[:150], desc[:5000], u, imgs[0], ",".join(imgs[1:10]),
                      f"{price:.2f} {o.get('priceCurrency','USD')}", "in_stock", "new", "Printara", "no",
-                     "Toys & Games > Toys > Model Building Kits", "digital_download", seller, "US:::0.00 USD", "no"])
+                     category(title), "digital_download", seller, "US:::0.00 USD", "no"])
 def jpg(src):
     import hashlib, io
     name = hashlib.sha1(src.encode()).hexdigest()[:20] + ".jpg"
