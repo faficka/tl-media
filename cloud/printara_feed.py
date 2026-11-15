@@ -44,6 +44,8 @@ def category(title):
     for pat, cat in CATEGORIES:
         if re.search(pat, title, re.I): return cat
     return "Arts & Entertainment > Hobbies & Creative Arts > Model Making > Scale Model Kits"
+# Digital download = free "shipping" in every target country (US + English-speaking markets since 15.11.2026).
+SHIPPING = ",".join(f"{c}:::0.00 {cur}" for c, cur in [("US","USD"),("GB","GBP"),("CA","CAD"),("AU","AUD"),("IE","EUR"),("NZ","NZD")])
 rows, bad = [], []
 with cf.ThreadPoolExecutor(8) as ex:
     for r in ex.map(one, urls):
@@ -61,7 +63,7 @@ with cf.ThreadPoolExecutor(8) as ex:
         desc = f"Digital download (3D printable file) sold on the Printara marketplace{' by ' + seller if seller else ''}. {desc}"
         rows.append([d.get("sku") or u.rsplit("-", 5)[-5:], title[:150], desc[:5000], u, imgs[0], ",".join(imgs[1:10]),
                      f"{price:.2f} {o.get('priceCurrency','USD')}", "in_stock", "new", "Printara", "no",
-                     category(title), "digital_download", seller, "US:::0.00 USD", "no"])
+                     category(title), "digital_download", seller, SHIPPING, "no"])
 def jpg(src):
     import hashlib, io
     name = hashlib.sha1(src.encode()).hexdigest()[:20] + ".jpg"
