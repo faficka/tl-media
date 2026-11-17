@@ -34,10 +34,14 @@ def gql(key, query, variables=None):
     try:
         r = json.load(urllib.request.urlopen(req, timeout=120))
     except urllib.error.HTTPError as e:
-        sys.exit(f"Buffer HTTP {e.code}: {e.read().decode(errors='replace')[:300]}")
+        raise BufferError(f"HTTP {e.code}: {e.read().decode(errors='replace')[:300]}")
     if "errors" in r:
-        sys.exit(f"Buffer error: {r['errors']}")
+        raise BufferError(str(r["errors"])[:300])
     return r["data"]
+
+
+class BufferError(Exception):
+    """One brand's Buffer failing (e.g. revoked key) must not stop the other brands' notifications."""
 
 
 def posts(key, start):
@@ -215,15 +219,27 @@ def main(dry):
     first_run = not state
     done = state.get("done", {})
     now = dt.datetime.now(dt.timezone.utc)
-    found = [(b, p) for b, env in BRANDS.items() if os.environ.get(env)
-             for p in posts(os.environ[env], now - dt.timedelta(days=2))]
+    found, broken = [], []
+    for b, env in BRANDS.items():
+        if not os.environ.get(env):
+            continue
+        try:
+            found += [(b, p) for p in posts(os.environ[env], now - dt.timedelta(days=2))]
+        except BufferError as e:
+            print(f"Buffer {b}: {e}", file=sys.stderr)
+            broken.append(b)
+    if broken and state.get("broken_warn") != now.astimezone(PRAGUE).date().isoformat():
+        send("🔑 Buffer API klíč nefunguje: " + ", ".join(broken) + ". Plnění fronty a upozornění pro tuto značku stojí,"
+             " je potřeba nový klíč (Buffer → Settings → API) do GitHub secretu.", dry)
+        state["broken_warn"] = now.astimezone(PRAGUE).date().isoformat()
     for brand, p in sorted(found, key=lambda bp: bp[1]["dueAt"]):
         if p["id"] in done or when(p) > now:
             continue
         text = message(brand, p)
         if text is None:
             continue
-        if not first_run:  # first run only records what already happened, no flood of old posts
+        # first run only records what already happened; after an outage, posts older than 6 h are only recorded
+        if not first_run and when(p) > now - dt.timedelta(hours=6):
             send(text, dry)
         done[p["id"]] = p["dueAt"]
     reminders(state, now, dry)
