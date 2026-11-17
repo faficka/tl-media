@@ -13,6 +13,15 @@ MIN_ROWS = int(os.environ.get("FEED_MIN_ROWS", "0"))
 IMG_DIR = os.environ.get("FEED_IMG_DIR")
 IMG_BASE = os.environ.get("FEED_IMG_BASE", "https://raw.githubusercontent.com/faficka/tl-media/printara-img/")
 UA = {"User-Agent": "printara-feed-builder"}
+# Product videos (Merchant Center Product Studio "Animate images", 8 s 1280x720): printara/videos/printara_<id prefix>_*.mp4,
+# served by GitHub Pages as video/mp4 -> [video_link] (max 10 per product, comma-separated in TSV).
+VID_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "printara", "videos")
+VID_BASE = "https://faficka.github.io/tl-media/printara/videos/"
+VIDEOS = {}
+for _f in sorted(os.listdir(VID_DIR)) if os.path.isdir(VID_DIR) else []:
+    _m = re.match(r"printara_([0-9a-f]{8})_.+\.mp4$", _f)
+    if _m: VIDEOS.setdefault(_m.group(1), []).append(VID_BASE + _f)
+def videos(pid): return ",".join(VIDEOS.get(str(pid)[:8], [])[:10])
 def get(u): return urllib.request.urlopen(urllib.request.Request(u, headers=UA), timeout=40).read().decode("utf-8", "replace")
 urls = re.findall(r"<loc>([^<]+)</loc>", get("https://printara.co/sitemap-models.xml"))
 def one(u):
@@ -111,6 +120,7 @@ with cf.ThreadPoolExecutor(8) as ex:
         rows.append([d.get("sku") or u.rsplit("-", 5)[-5:], g_title(title, desc, cat), g_desc(title, desc, seller), u, imgs[0], ",".join(imgs[1:10]),
                      f"{price:.2f} {o.get('priceCurrency','USD')}", "in_stock", "new", "Printara", "no",
                      cat, "digital_download", seller, SHIPPING, "no", g_type(title, cat), g_highlights(title, desc)])
+        rows[-1].append(videos(rows[-1][0]))
 def jpg(src):
     import hashlib, io
     name = hashlib.sha1(src.encode()).hexdigest()[:20] + ".jpg"
@@ -136,7 +146,7 @@ if IMG_DIR:
         if f.endswith(".jpg") and f not in keep: os.remove(os.path.join(IMG_DIR, f))
 if len(rows) < MIN_ROWS:
     raise SystemExit(f"only {len(rows)} rows (< {MIN_ROWS}), keeping the old feed")
-head = ["id","title","description","link","image_link","additional_image_link","price","availability","condition","brand","identifier_exists","google_product_category","custom_label_0","custom_label_1","shipping","adult","product_type","product_highlight"]
+head = ["id","title","description","link","image_link","additional_image_link","price","availability","condition","brand","identifier_exists","google_product_category","custom_label_0","custom_label_1","shipping","adult","product_type","product_highlight","video_link"]
 with open(os.path.join(OUT, "google_feed_marketplace.tsv"), "w", newline="", encoding="utf-8") as f:
     w = csv.writer(f, delimiter="\t"); w.writerow(head); w.writerows(rows)
 with open(os.path.join(OUT, "marketplace_skipped.json"), "w", encoding="utf-8") as f: json.dump(bad, f, ensure_ascii=False, indent=1)
