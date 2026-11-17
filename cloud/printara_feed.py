@@ -44,6 +44,51 @@ def category(title):
     for pat, cat in CATEGORIES:
         if re.search(pat, title, re.I): return cat
     return "Arts & Entertainment > Hobbies & Creative Arts > Model Making > Scale Model Kits"
+
+# 17.11.2026 (owner OK): Google-friendly titles/descriptions built ONLY from the seller's own title/description.
+FEAT_TYPES = [("Figurines", "Figurine"), ("Holiday Ornaments", "Ornament"), ("Lamps", "Lamp"), ("Masks", "Mask")]
+def is_laser(t): return bool(re.search(r"laser|\bsvg\b|\bdxf\b", t, re.I))
+def feats(t, d):
+    s = (t + " " + d).lower(); f = set()
+    if re.search(r"pre-?supported", s): f.add("presupported")
+    if re.search(r"\b3mf\b|\bams\b|multi-?colou?r", s): f.add("3mf")
+    return f, list(dict.fromkeys(re.findall(r"\b(\d{2,3})\s?mm\b", t)))
+def core(t):
+    c = re.split(r"\s[-–|:—]\s|,\s", t)[0]
+    c = re.sub(r"\b(3D Print(able|ed)?|STL( Files?)?|3MF|Pre-?Supported|Scalable|All Scales|FDM|SLA|Resin|AMS Ready|Multi-?Colou?r|Laser[- ]?cut( Files?)?|SVG|DXF|File)\b", "", c, flags=re.I)
+    c = re.sub(r"\b\d{2,3}\s?mm\b", "", c); c = re.sub(r"\b(and|for|&|\+)\s*$", "", c.strip(), flags=re.I)
+    return re.sub(r"\s{2,}", " ", c).strip(" -–|,&+") or t
+def g_title(t, d, cat):
+    c = core(t); f, mm = feats(t, d)
+    if is_laser(t): return f"{c} – Laser Cut File | SVG & DXF Digital Download"[:150]
+    if len(c.split()) <= 2:
+        for k, n in FEAT_TYPES:
+            if k in cat and n.lower() not in c.lower(): c = f"{c} {n}"; break
+    tail = ["3D Printable STL File"]
+    if "presupported" in f: tail.append("Presupported")
+    if "3mf" in f: tail.append("Multicolor AMS 3MF")
+    if mm: tail.append(" / ".join(mm) + " mm")
+    return (c + " – " + " | ".join(tail))[:150]
+def g_desc(t, d, seller):
+    f, mm = feats(t, d); c = core(t)
+    if is_laser(t): lead = f"Laser cut file (SVG and DXF) of {c}."
+    else:
+        ex = []
+        if "presupported" in f: ex.append("presupported for resin printers")
+        if "3mf" in f: ex.append("multicolor 3MF ready for Bambu Lab AMS")
+        if mm: ex.append("scaled for " + ", ".join(mm) + " mm")
+        lead = f"3D printable STL file of {c}" + (", " + ", ".join(ex) if ex else "") + "."
+    lead += " Instant digital download from the Printara marketplace" + (f" by {seller}" if seller else "") + ". "
+    return (lead + d)[:5000]
+def g_highlights(t, d):
+    f, mm = feats(t, d); h = ["Instant digital download after purchase"]
+    if is_laser(t): h.append("SVG and DXF files for laser cutters")
+    else:
+        if "presupported" in f: h.append("Presupported for resin printing")
+        if "3mf" in f: h.append("Multicolor 3MF for Bambu Lab AMS")
+        if mm: h.append("Scaled for " + " / ".join(mm) + " mm")
+    return ",".join(h)
+def g_type(t, cat): return ("Digital Downloads > Laser Cut Files > " if is_laser(t) else "Digital Downloads > 3D Printable Files > ") + cat.split(" > ")[-1]
 # Digital download = free "shipping" in every target country (US + English-speaking markets since 15.11.2026).
 # All shipping values in USD = same currency as price (Google rejects mixed currencies: "Inconsistent currencies", 17.11.2026).
 # 17.11.2026: + European countries (English feed, prices auto-converted by Google).
@@ -62,10 +107,10 @@ with cf.ThreadPoolExecutor(8) as ex:
         title = re.sub(r"\s+", " ", d["name"]).strip()
         if EXCLUDE_IP.search(title) or EXCLUDE_IP.search(d.get("description") or ""): bad.append(("IP_EXCLUDED", u, title)); continue
         desc = re.sub(r"\s+", " ", d.get("description") or title).strip()
-        desc = f"Digital download (3D printable file) sold on the Printara marketplace{' by ' + seller if seller else ''}. {desc}"
-        rows.append([d.get("sku") or u.rsplit("-", 5)[-5:], title[:150], desc[:5000], u, imgs[0], ",".join(imgs[1:10]),
+        cat = category(title)
+        rows.append([d.get("sku") or u.rsplit("-", 5)[-5:], g_title(title, desc, cat), g_desc(title, desc, seller), u, imgs[0], ",".join(imgs[1:10]),
                      f"{price:.2f} {o.get('priceCurrency','USD')}", "in_stock", "new", "Printara", "no",
-                     category(title), "digital_download", seller, SHIPPING, "no"])
+                     cat, "digital_download", seller, SHIPPING, "no", g_type(title, cat), g_highlights(title, desc)])
 def jpg(src):
     import hashlib, io
     name = hashlib.sha1(src.encode()).hexdigest()[:20] + ".jpg"
@@ -91,7 +136,7 @@ if IMG_DIR:
         if f.endswith(".jpg") and f not in keep: os.remove(os.path.join(IMG_DIR, f))
 if len(rows) < MIN_ROWS:
     raise SystemExit(f"only {len(rows)} rows (< {MIN_ROWS}), keeping the old feed")
-head = ["id","title","description","link","image_link","additional_image_link","price","availability","condition","brand","identifier_exists","google_product_category","custom_label_0","custom_label_1","shipping","adult"]
+head = ["id","title","description","link","image_link","additional_image_link","price","availability","condition","brand","identifier_exists","google_product_category","custom_label_0","custom_label_1","shipping","adult","product_type","product_highlight"]
 with open(os.path.join(OUT, "google_feed_marketplace.tsv"), "w", newline="", encoding="utf-8") as f:
     w = csv.writer(f, delimiter="\t"); w.writerow(head); w.writerows(rows)
 with open(os.path.join(OUT, "marketplace_skipped.json"), "w", encoding="utf-8") as f: json.dump(bad, f, ensure_ascii=False, indent=1)
