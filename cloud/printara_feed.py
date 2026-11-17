@@ -46,7 +46,8 @@ def category(title):
     return "Arts & Entertainment > Hobbies & Creative Arts > Model Making > Scale Model Kits"
 # Digital download = free "shipping" in every target country (US + English-speaking markets since 15.11.2026).
 # All shipping values in USD = same currency as price (Google rejects mixed currencies: "Inconsistent currencies", 17.11.2026).
-SHIPPING = ",".join(f"{c}:::0.00 USD" for c in ["US","GB","CA","AU","IE","NZ"])
+# 17.11.2026: + European countries (English feed, prices auto-converted by Google).
+SHIPPING = ",".join(f"{c}:::0.00 USD" for c in ["US","GB","CA","AU","IE","NZ","DE","FR","NL","BE","AT","ES","IT","PT","PL","CZ","SK","SE","DK","FI"])
 rows, bad = [], []
 with cf.ThreadPoolExecutor(8) as ex:
     for r in ex.map(one, urls):
