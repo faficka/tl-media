@@ -66,27 +66,53 @@ def core(t):
     c = re.split(r"\s[-–|:—]\s|,\s", t)[0]
     c = re.sub(r"\b(3D Print(able|ed)?|STL( Files?)?|3MF|Pre-?Supported|Scalable|All Scales|FDM|SLA|Resin|AMS Ready|Multi-?Colou?r|Laser[- ]?cut( Files?)?|SVG|DXF|File)\b", "", c, flags=re.I)
     c = re.sub(r"\b\d{2,3}\s?mm\b", "", c); c = re.sub(r"\b(and|for|&|\+)\s*$", "", c.strip(), flags=re.I)
-    return re.sub(r"\s{2,}", " ", c).strip(" -–|,&+") or t
+    c = re.sub(r"\b(Bambu( Lab)?|AMS)\b", "", c, flags=re.I)
+    c = re.sub(r"[^\w\s'&()./,+-]", "", c)  # emoji/symbols: Google flags them in titles
+    c = re.sub(r"(\s+3D(\s+P\w{0,3})?)+\s*$", "", c, flags=re.I)  # truncated seller titles ending in "3D P"
+    c = re.sub(r"\s{2,}", " ", c).strip(" -–|,&+")
+    if c and c == c.lower(): c = c.title()
+    return c or t
+# 19.11.2026 (owner OK): titles follow Google search demand (autocomplete + Search Console):
+# people type "<thing> stl file(s)", "stl files for 3d printing", "christmas decorations stl",
+# "3d printed christmas village", "halloween stl", "3d print files for bambu", "laser cut files svg".
+# So the keyword phrase sits right after the product name, then occasion, then file extras.
+def occasion(t, c):
+    s, cl = t.lower(), c.lower()
+    if re.search(r"fidget|clicker", s): return "Fidget Toy" if "fidget" not in cl else ""
+    if re.search(r"christmas|xmas|santa|gingerbread|nativity|north pole|reindeer|snowman|noel|advent|winter village|snowy", s):
+        if re.search(r"ornament|bauble", s):
+            if re.search(r"ornament|bauble", cl): return "Christmas Tree Decoration" if "christmas" not in cl else "Tree Decoration"
+            return "Christmas Tree Ornament" if "christmas" not in cl else "Tree Ornament"
+        if re.search(r"village|house|shop|bakery|post office|church|cottage|workshop|chalet|cabin", s): return "Christmas Village Decor" if "christmas" not in cl else "Holiday Village Decor"
+        return "Christmas Decoration" if "christmas" not in cl else "Holiday Decoration"
+    if re.search(r"halloween|pumpkin|haunted|spooky|witch|jack.?o", s): return "Halloween Decoration" if "halloween" not in cl else "Spooky Decor"
+    if re.search(r"book ?nook", s): return "Bookshelf Insert"
+    if re.search(r"bust|statue|sculpt", cl): return ""
+    if re.search(r"\b(28|32)\s?mm\b|tabletop|\bdnd\b|d&d|wargam|\brpg\b", s):
+        return "Tabletop Terrain" if re.search(r"diorama|terrain|building|house|market|tower|ruin|castle|tavern|scenery", cl) else "Tabletop Miniature"
+    return ""
 def g_title(t, d, cat):
     c = core(t); f, mm = feats(t, d)
-    if is_laser(t): return f"{c} – Laser Cut File | SVG & DXF Digital Download"[:150]
+    if is_laser(t): return f"{c} Laser Cut Files – SVG & DXF Digital Download"[:150]
     if len(c.split()) <= 2:
         for k, n in FEAT_TYPES:
             if k in cat and n.lower() not in c.lower(): c = f"{c} {n}"; break
-    tail = ["3D Printable STL File"]
+    tail = [x for x in [occasion(t, c)] if x]
     if "presupported" in f: tail.append("Presupported")
-    if "3mf" in f: tail.append("Multicolor AMS 3MF")
+    if "3mf" in f: tail.append("Multicolor 3MF for Bambu Lab AMS")
     if mm: tail.append(" / ".join(mm) + " mm")
-    return (c + " – " + " | ".join(tail))[:150]
+    title = f"{c} STL File for 3D Printing" + (" – " + " | ".join(tail) if tail else "")
+    while len(title) > 150 and tail: tail.pop(); title = f"{c} STL File for 3D Printing" + (" – " + " | ".join(tail) if tail else "")
+    return title[:150]
 def g_desc(t, d, seller):
     f, mm = feats(t, d); c = core(t)
-    if is_laser(t): lead = f"Laser cut file (SVG and DXF) of {c}."
+    if is_laser(t): lead = f"{c} laser cut files (SVG and DXF)."
     else:
         ex = []
         if "presupported" in f: ex.append("presupported for resin printers")
         if "3mf" in f: ex.append("multicolor 3MF ready for Bambu Lab AMS")
         if mm: ex.append("scaled for " + ", ".join(mm) + " mm")
-        lead = f"3D printable STL file of {c}" + (", " + ", ".join(ex) if ex else "") + "."
+        lead = f"{c} STL file for 3D printing" + (", " + ", ".join(ex) if ex else "") + "."
     lead += " Instant digital download from the Printara marketplace" + (f" by {seller}" if seller else "") + ". "
     return (lead + d)[:5000]
 def g_highlights(t, d):
