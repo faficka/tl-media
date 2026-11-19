@@ -170,6 +170,17 @@ if IMG_DIR:
     keep = {r[4].rsplit("/", 1)[-1] for r in rows}
     for f in os.listdir(IMG_DIR):
         if f.endswith(".jpg") and f not in keep: os.remove(os.path.join(IMG_DIR, f))
+# 19.11.2026 (owner OK, first 30 of TOP100): Merchant Center Product Studio scene images as the MAIN image.
+# URLs come from an MC product export (shopping.googleusercontent.com, Google-hosted, keeps Google's AI metadata,
+# so they are NOT re-encoded). The seller's photo moves to the front of the additional images.
+SCENE_MAIN = os.path.join(os.path.dirname(os.path.abspath(__file__)), "printara_scene_main.json")
+if os.path.exists(SCENE_MAIN):
+    _scene = json.load(open(SCENE_MAIN, encoding="utf-8"))
+    for r in rows:
+        s = _scene.get(str(r[0]))
+        if s and r[4] != s:
+            extra = [x for x in r[5].split(",") if x and x != s]
+            r[5] = ",".join([r[4]] + extra[:9]); r[4] = s
 if len(rows) < MIN_ROWS:
     raise SystemExit(f"only {len(rows)} rows (< {MIN_ROWS}), keeping the old feed")
 head = ["id","title","description","link","image_link","additional_image_link","price","availability","condition","brand","identifier_exists","google_product_category","custom_label_0","custom_label_1","shipping","adult","product_type","product_highlight","video_link"]
