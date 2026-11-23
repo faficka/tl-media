@@ -9599,6 +9599,35 @@
   }
  },
  {
+  "due": "2026-11-29T23:45:00.000Z",
+  "service": "pinterest",
+  "label": "2026-11-29 18:45 ET lofi pin lofi_ghosting",
+  "board": "Love Reading",
+  "post": {
+   "schedulingType": "automatic",
+   "mode": "customScheduled",
+   "needsApproval": false,
+   "dueAt": "2026-11-29T23:45:00.000Z",
+   "text": "Signs most likely to come back after ghosting you. 1. Scorpio: never really left. Still watches your stories from a second account. Save this and send it to someone who needs it. Zodiac signs in love, astrology love, zodiac relationships, love horoscope.",
+   "assets": [
+    {
+     "image": {
+      "url": "https://faficka.github.io/tl-media/pi/lofi_ghosting_pin.jpg",
+      "metadata": {
+       "altText": "Signs most likely to come back after ghosting you, a text list by zodiac sign."
+      }
+     }
+    }
+   ],
+   "metadata": {
+    "pinterest": {
+     "title": "Signs most likely to come back after ghosting you (honest zodiac list)",
+     "url": ""
+    }
+   }
+  }
+ },
+ {
   "due": "2026-11-30T00:00:00.000Z",
   "service": "pinterest",
   "label": "2026-11-29 19:00 ET pin Pents05_partner.jpg",
@@ -9889,6 +9918,35 @@
   }
  },
  {
+  "due": "2026-11-30T23:45:00.000Z",
+  "service": "pinterest",
+  "label": "2026-11-30 18:45 ET lofi pin lofi_fated",
+  "board": "Love Reading",
+  "post": {
+   "schedulingType": "automatic",
+   "mode": "customScheduled",
+   "needsApproval": false,
+   "dueAt": "2026-11-30T23:45:00.000Z",
+   "text": "Signs that are fated to meet. Aries/Libra: the mirror. Opposites who teach each other balance. Save this and send it to someone who needs it. Zodiac signs in love, astrology love, zodiac relationships, love horoscope.",
+   "assets": [
+    {
+     "image": {
+      "url": "https://faficka.github.io/tl-media/pi/lofi_fated_pin.jpg",
+      "metadata": {
+       "altText": "Signs that are fated to meet, a text list by zodiac sign."
+      }
+     }
+    }
+   ],
+   "metadata": {
+    "pinterest": {
+     "title": "Signs that are fated to meet (honest zodiac list)",
+     "url": ""
+    }
+   }
+  }
+ },
+ {
   "due": "2026-12-01T00:00:00.000Z",
   "service": "pinterest",
   "label": "2026-11-30 19:00 ET pin Swords14_rev.jpg",
@@ -10173,6 +10231,35 @@
    "metadata": {
     "pinterest": {
      "title": "Two of Wands Reversed in Love: Tarot Meaning",
+     "url": ""
+    }
+   }
+  }
+ },
+ {
+  "due": "2026-12-01T23:45:00.000Z",
+  "service": "pinterest",
+  "label": "2026-12-01 18:45 ET lofi pin lofi_moon",
+  "board": "Love Reading",
+  "post": {
+   "schedulingType": "automatic",
+   "mode": "customScheduled",
+   "needsApproval": false,
+   "dueAt": "2026-12-01T23:45:00.000Z",
+   "text": "How each Moon sign loves (and how they leave). Aries Moon: loves fast and all in, the first to say it. Leaves in one fight and never looks back. Save this and send it to someone who needs it. Zodiac signs in love, astrology love, zodiac relationships, love horoscope.",
+   "assets": [
+    {
+     "image": {
+      "url": "https://faficka.github.io/tl-media/pi/lofi_moon_pin.jpg",
+      "metadata": {
+       "altText": "How each Moon sign loves (and how they leave), a text list by zodiac sign."
+      }
+     }
+    }
+   ],
+   "metadata": {
+    "pinterest": {
+     "title": "How each Moon sign loves (and how they leave) (honest zodiac list)",
      "url": ""
     }
    }
