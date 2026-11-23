@@ -2501,5 +2501,30 @@
     }
    }
   }
+ },
+ {
+  "due": "2026-11-23T21:00:00.000Z",
+  "service": "instagram",
+  "label": "2026-11-23 22:00 Prague soulmate reel A01",
+  "post": {
+   "schedulingType": "automatic",
+   "mode": "customScheduled",
+   "needsApproval": false,
+   "dueAt": "2026-11-23T21:00:00.000Z",
+   "text": "Lia, your soulmate drawing 💌🔮 Aquarius, this one is for you.\n\nFor a chance to get a free drawing, comment your name and sign. To skip the line, link in profile.\n\n#soulmate #soulmatedrawing #soulmatesketch #tarotreading #lovereading #psychicart #aquarius #zodiac",
+   "assets": [
+    {
+     "video": {
+      "url": "https://faficka.github.io/tl-media/v/SM_A01.mp4"
+     }
+    }
+   ],
+   "metadata": {
+    "instagram": {
+     "type": "reel",
+     "shouldShareToFeed": true
+    }
+   }
+  }
  }
 ]

@@ -7830,6 +7830,35 @@
   }
  },
  {
+  "due": "2026-11-23T23:15:00.000Z",
+  "service": "pinterest",
+  "label": "2026-11-23 18:15 ET soulmate pin A01",
+  "board": "Soulmate Reading",
+  "post": {
+   "schedulingType": "automatic",
+   "mode": "customScheduled",
+   "needsApproval": false,
+   "dueAt": "2026-11-23T23:15:00.000Z",
+   "text": "Soulmate drawing for an Aquarius ✨ Tarot reading + hand drawn charcoal sketch of your future partner: Gemini or Libra placements, hazel eyes, dark curly hair, scar on eyebrow. Comment your name and sign for yours. Soulmate sketch, soulmate drawing psychic, future husband drawing, aquarius soulmate.",
+   "assets": [
+    {
+     "image": {
+      "url": "https://faficka.github.io/tl-media/pi/SM_A01.jpg",
+      "metadata": {
+       "altText": "Charcoal soulmate drawing of a future partner for an Aquarius, with handwritten traits on the paper."
+      }
+     }
+    }
+   ],
+   "metadata": {
+    "pinterest": {
+     "title": "Soulmate Drawing for An Aquarius ✨ Psychic Sketch of Your Future Partner",
+     "url": ""
+    }
+   }
+  }
+ },
+ {
   "due": "2026-11-24T00:00:00.000Z",
   "service": "pinterest",
   "label": "2026-11-23 19:00 ET pin Cups04_partner.jpg",
