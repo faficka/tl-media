@@ -8149,6 +8149,35 @@
   }
  },
  {
+  "due": "2026-11-24T23:15:00.000Z",
+  "service": "pinterest",
+  "label": "2026-11-24 18:15 ET soulmate pin A02",
+  "board": "Soulmate Reading",
+  "post": {
+   "schedulingType": "automatic",
+   "mode": "customScheduled",
+   "needsApproval": false,
+   "dueAt": "2026-11-24T23:15:00.000Z",
+   "text": "Soulmate drawing for a Sagittarius ✨ Tarot reading + hand drawn charcoal sketch of your future partner: Aries or Leo placements, dark brown eyes, short black hair, dimples when he smiles. Comment your name and sign for yours. Soulmate sketch, soulmate drawing psychic, future husband drawing, sagittarius soulmate.",
+   "assets": [
+    {
+     "image": {
+      "url": "https://faficka.github.io/tl-media/pi/SM_A02.jpg",
+      "metadata": {
+       "altText": "Charcoal soulmate drawing of a future partner for a Sagittarius, with handwritten traits on the paper."
+      }
+     }
+    }
+   ],
+   "metadata": {
+    "pinterest": {
+     "title": "Soulmate Drawing for A Sagittarius ✨ Psychic Sketch of Your Future Partner",
+     "url": ""
+    }
+   }
+  }
+ },
+ {
   "due": "2026-11-25T00:00:00.000Z",
   "service": "pinterest",
   "label": "2026-11-24 19:00 ET pin Pents13_rev.jpg",
@@ -8433,6 +8462,35 @@
    "metadata": {
     "pinterest": {
      "title": "Ace of Swords Reversed in Love: Tarot Meaning",
+     "url": ""
+    }
+   }
+  }
+ },
+ {
+  "due": "2026-11-25T23:15:00.000Z",
+  "service": "pinterest",
+  "label": "2026-11-25 18:15 ET soulmate pin A03",
+  "board": "Soulmate Reading",
+  "post": {
+   "schedulingType": "automatic",
+   "mode": "customScheduled",
+   "needsApproval": false,
+   "dueAt": "2026-11-25T23:15:00.000Z",
+   "text": "Soulmate drawing for a Gemini ✨ Tarot reading + hand drawn charcoal sketch of your future partner: Libra or Aquarius placements, green eyes, freckles, long wavy hair. Comment your name and sign for yours. Soulmate sketch, soulmate drawing psychic, future husband drawing, gemini soulmate.",
+   "assets": [
+    {
+     "image": {
+      "url": "https://faficka.github.io/tl-media/pi/SM_A03.jpg",
+      "metadata": {
+       "altText": "Charcoal soulmate drawing of a future partner for a Gemini, with handwritten traits on the paper."
+      }
+     }
+    }
+   ],
+   "metadata": {
+    "pinterest": {
+     "title": "Soulmate Drawing for A Gemini ✨ Psychic Sketch of Your Future Partner",
      "url": ""
     }
    }
@@ -8729,6 +8787,35 @@
   }
  },
  {
+  "due": "2026-11-26T23:15:00.000Z",
+  "service": "pinterest",
+  "label": "2026-11-26 18:15 ET soulmate pin A04",
+  "board": "Soulmate Reading",
+  "post": {
+   "schedulingType": "automatic",
+   "mode": "customScheduled",
+   "needsApproval": false,
+   "dueAt": "2026-11-26T23:15:00.000Z",
+   "text": "Soulmate drawing for a Scorpio ✨ Tarot reading + hand drawn charcoal sketch of your future partner: Cancer or Pisces placements, dark intense eyes, full beard, tattoo on his arm. Comment your name and sign for yours. Soulmate sketch, soulmate drawing psychic, future husband drawing, scorpio soulmate.",
+   "assets": [
+    {
+     "image": {
+      "url": "https://faficka.github.io/tl-media/pi/SM_A04.jpg",
+      "metadata": {
+       "altText": "Charcoal soulmate drawing of a future partner for a Scorpio, with handwritten traits on the paper."
+      }
+     }
+    }
+   ],
+   "metadata": {
+    "pinterest": {
+     "title": "Soulmate Drawing for A Scorpio ✨ Psychic Sketch of Your Future Partner",
+     "url": ""
+    }
+   }
+  }
+ },
+ {
   "due": "2026-11-27T00:00:00.000Z",
   "service": "pinterest",
   "label": "2026-11-26 19:00 ET pin Cups12_partner.jpg",
@@ -9019,6 +9106,35 @@
   }
  },
  {
+  "due": "2026-11-27T23:15:00.000Z",
+  "service": "pinterest",
+  "label": "2026-11-27 18:15 ET soulmate pin A05",
+  "board": "Soulmate Reading",
+  "post": {
+   "schedulingType": "automatic",
+   "mode": "customScheduled",
+   "needsApproval": false,
+   "dueAt": "2026-11-27T23:15:00.000Z",
+   "text": "Soulmate drawing for an Aquarius ✨ Tarot reading + hand drawn charcoal sketch of your future partner: Gemini or Sagittarius placements, glasses, soft brown eyes, short wavy hair. Comment your name and sign for yours. Soulmate sketch, soulmate drawing psychic, future husband drawing, aquarius soulmate.",
+   "assets": [
+    {
+     "image": {
+      "url": "https://faficka.github.io/tl-media/pi/SM_A05.jpg",
+      "metadata": {
+       "altText": "Charcoal soulmate drawing of a future partner for an Aquarius, with handwritten traits on the paper."
+      }
+     }
+    }
+   ],
+   "metadata": {
+    "pinterest": {
+     "title": "Soulmate Drawing for An Aquarius ✨ Psychic Sketch of Your Future Partner",
+     "url": ""
+    }
+   }
+  }
+ },
+ {
   "due": "2026-11-28T00:00:00.000Z",
   "service": "pinterest",
   "label": "2026-11-27 19:00 ET pin Swords06_rev.jpg",
@@ -9303,6 +9419,35 @@
    "metadata": {
     "pinterest": {
      "title": "The Hanged Man Reversed in Love: Tarot Meaning",
+     "url": ""
+    }
+   }
+  }
+ },
+ {
+  "due": "2026-11-28T23:15:00.000Z",
+  "service": "pinterest",
+  "label": "2026-11-28 18:15 ET soulmate pin A06",
+  "board": "Soulmate Reading",
+  "post": {
+   "schedulingType": "automatic",
+   "mode": "customScheduled",
+   "needsApproval": false,
+   "dueAt": "2026-11-28T23:15:00.000Z",
+   "text": "Soulmate drawing for a Sagittarius ✨ Tarot reading + hand drawn charcoal sketch of your future partner: Leo or Aries placements, brown eyes, dark curly hair, bright smile. Comment your name and sign for yours. Soulmate sketch, soulmate drawing psychic, future husband drawing, sagittarius soulmate.",
+   "assets": [
+    {
+     "image": {
+      "url": "https://faficka.github.io/tl-media/pi/SM_A06.jpg",
+      "metadata": {
+       "altText": "Charcoal soulmate drawing of a future partner for a Sagittarius, with handwritten traits on the paper."
+      }
+     }
+    }
+   ],
+   "metadata": {
+    "pinterest": {
+     "title": "Soulmate Drawing for A Sagittarius ✨ Psychic Sketch of Your Future Partner",
      "url": ""
     }
    }
