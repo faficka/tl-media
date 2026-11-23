@@ -2526,5 +2526,24 @@
     }
    }
   }
+ },
+ {
+  "due": "2026-11-24T01:00:00.000Z",
+  "service": "tiktok",
+  "label": "2026-11-23 20:00 ET soulmate tiktok A01",
+  "post": {
+   "schedulingType": "automatic",
+   "mode": "customScheduled",
+   "needsApproval": false,
+   "dueAt": "2026-11-24T01:00:00.000Z",
+   "text": "@unworthygirl24 Lia, your soulmate drawing 💌🔮 For a chance to get a free drawing, comment your name and sign. To skip the line, link in profile. #soulmate #soulmatedrawing #soulmatesketch #tarotreading #lovereading #psychicart #aquarius",
+   "assets": [
+    {
+     "video": {
+      "url": "https://faficka.github.io/tl-media/v/SM_A01.mp4"
+     }
+    }
+   ]
+  }
  }
 ]
