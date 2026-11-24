@@ -6,6 +6,8 @@ OUT = os.environ.get("FEED_OUT") or os.path.dirname(os.path.abspath(__file__))
 os.makedirs(OUT, exist_ok=True)
 # Third-party franchises and trademarks: Google treats them as counterfeit/IP risk, which can suspend the whole account.
 EXCLUDE_IP = re.compile(r"""grinch|monster hand|skull lich|lich bust|never sleep again|dream demon|pumpkin king|demonic nun|beagle dog pup|monster energy|red bull|coca.?cola|pepsi|lord of the rings|\blotr\b|esdla|tolkien|hobbit|\bfrodo\b|gandalf|sauron|\bazog\b|gollum|aragorn|legolas|galadriel|celeborn|nazg[uû]l|gil.?galad|bilbo|faramir|radagast|bofur|merry and pippin|mordor|gondor|one piece|pok[eé]mon|gengar|pikachu|witcher|peter griffin|space marine|terminator|alien predator|xenomorph|diablo|ac/dc|angus young|ghostface|\bjoker\b|clown prince|fan art|fan sculpt|fanart|star wars|marvel|disney|harry potter|warhammer|nintendo|zelda|super mario|batman|spider-?man|stranger things|game of thrones|heavily inspired by|strongly inspired by|directly inspired by|inspired by the (?:most )?iconic|inspired by the legendary|middle.?earth|prancing pony|ring bearer|\bdunes?\s*-|atreides|artreides|irulan|\bchani|rabban|fenring|mk scorpion|mortal kombat|sub.?zero|davy jones|ghost of sparta|kratos|god of war|night he came home|michael myers|chainsaw slasher|leatherface|texas chainsaw|jurassic|paddock|maximus|gladiator general|resident evil|dimitrescu|colonial marine|bug hunter|messi|lamine yamal|mustaine|mccartney|beatles|biggie|notorious b|valentino rossi|racing legend|metallica|cliff burton|kurt cobain|haaland|mbapp|ronaldo|cr7|schwarzenegger|king of pop|michael jackson|thriller|smooth criminal|prince of darkness|ozzy|45th us president|trump|irish rock legend|rock legend vocalist|west coast rap|reggae legend|g?lam rock|stage legend|starman|freddie|bowie|tupac|bob marley|bono|hockey mask|camp blood|camp slasher|crystal lake|ghost mask|ghostface|sewer clown|time to float|pennywise|playtime is over|miss me possessed|someone.s always watching|no one escapes|beetlejuice|hocus pocus|sanderson|birmingham gangster|peaky|godfather|mob boss|tulsa|bio.?mutant nemesis|ultimate weapon|the mask movie|green anti.?hero|xeno.?terror|sandworm|desert leviathan|shadow of the island|tsushima|fungal mutant|cordyceps|last of us|horror slasher movie|mystery solving team|scooby|bedrock|flintstone|yabba|dabba|detective rabbit|noir investigator|cartoon rabbit|sun.kissed savior|baywatch|yellow square cartoon|spongebob|cheese enthusiast|wallace|\bkcd\b|kingdom come""", re.I)
+# Test/repair listings that must not be advertised (owner OK 24.11.2026).
+EXCLUDE_IDS = {"2c76b750-f0ae-4a39-b74f-77cbb427b88f"}  # "Oprava plošného gravírování louskáčka"
 MIN_ROWS = int(os.environ.get("FEED_MIN_ROWS", "0"))
 # Feed images: files.printara.co serves big PNGs (and JPEGs named .png with image/png), Microsoft MC rejected ~200
 # with "image URL issue". When FEED_IMG_DIR is set, each main image is re-encoded once to a real JPEG
@@ -127,7 +129,9 @@ def g_type(t, cat): return ("Digital Downloads > Laser Cut Files > " if is_laser
 # Digital download = free "shipping" in every target country (US + English-speaking markets since 15.11.2026).
 # All shipping values in USD = same currency as price (Google rejects mixed currencies: "Inconsistent currencies", 17.11.2026).
 # 17.11.2026: + European countries (English feed, prices auto-converted by Google).
-SHIPPING = ",".join(f"{c}:::0.00 USD" for c in ["US","GB","CA","AU","IE","NZ","DE","FR","NL","BE","AT","ES","IT","PT","PL","CZ","SK","SE","DK","FI"])
+# 24.11.2026 (owner OK "celý svět"): every Google Shopping country except Russia, Belarus, Myanmar (sanctions); max 100 shipping entries.
+SHIP_COUNTRIES = "US GB CA AU IE NZ DE FR NL BE AT ES IT PT PL CZ SK SE DK FI DZ AO AR BH BD BR BG KH CM CL CO CR CI HR CY DO EC EG SV EE ET GE GH GR GT HK HU IN ID IL JP JO KZ KE KW LV LB LI LT LU MG MY MT MU MX MA MZ NP NI NG NO OM PK PA PY PE PH PR RO SA SN SG ZA KR LK CH TW TZ TH TN TR UG UA AE UY UZ VE VN ZM ZW".split()
+SHIPPING = ",".join(f"{c}:::0.00 USD" for c in SHIP_COUNTRIES)
 rows, bad = [], []
 with cf.ThreadPoolExecutor(8) as ex:
     for r in ex.map(one, urls):
@@ -140,6 +144,7 @@ with cf.ThreadPoolExecutor(8) as ex:
         if not imgs: bad.append(("NOIMG", u, "")); continue
         seller = (o.get("seller") or {}).get("name", "")
         title = re.sub(r"\s+", " ", d["name"]).strip()
+        if str(d.get("sku") or "") in EXCLUDE_IDS or any(x in u for x in EXCLUDE_IDS): bad.append(("EXCLUDED_ID", u, title)); continue
         if EXCLUDE_IP.search(title) or EXCLUDE_IP.search(d.get("description") or ""): bad.append(("IP_EXCLUDED", u, title)); continue
         desc = re.sub(r"\s+", " ", d.get("description") or title).strip()
         cat = category(title)
