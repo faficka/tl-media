@@ -170,7 +170,8 @@ if IMG_DIR:
     keep = {r[4].rsplit("/", 1)[-1] for r in rows}
     for f in os.listdir(IMG_DIR):
         if f.endswith(".jpg") and f not in keep: os.remove(os.path.join(IMG_DIR, f))
-# 19.11.2026 (owner OK, first 30 of TOP100): Merchant Center Product Studio scene images as the MAIN image.
+main_jpg = {r[0]: r[4] for r in rows}   # re-encoded seller photo (real JPEG), used by the Pinterest feed
+# 19.11.2026 (owner OK, first 30 of TOP100; 24.11. remaining 51 scenes, owner OK): Merchant Center Product Studio scene images as the MAIN image.
 # URLs come from an MC product export (shopping.googleusercontent.com, Google-hosted, keeps Google's AI metadata,
 # so they are NOT re-encoded). The seller's photo moves to the front of the additional images.
 SCENE_MAIN = os.path.join(os.path.dirname(os.path.abspath(__file__)), "printara_scene_main.json")
@@ -184,8 +185,22 @@ if os.path.exists(SCENE_MAIN):
 if len(rows) < MIN_ROWS:
     raise SystemExit(f"only {len(rows)} rows (< {MIN_ROWS}), keeping the old feed")
 head = ["id","title","description","link","image_link","additional_image_link","price","availability","condition","brand","identifier_exists","google_product_category","custom_label_0","custom_label_1","shipping","adult","product_type","product_highlight","video_link"]
-with open(os.path.join(OUT, "google_feed_marketplace.tsv"), "w", newline="", encoding="utf-8") as f:
-    w = csv.writer(f, delimiter="\t"); w.writerow(head); w.writerows(rows)
+# 24.11.2026 (owner OK): one feed per channel, each link tagged with UTM so GA4 shows which shopping channel brings visitors.
+def utm(u, source):
+    return u + ("&" if "?" in u else "?") + f"utm_source={source}&utm_medium=shopping_feed&utm_campaign=printara_marketplace"
+def write(name, hdr, data):
+    with open(os.path.join(OUT, name), "w", newline="", encoding="utf-8") as f:
+        w = csv.writer(f, delimiter="\t"); w.writerow(hdr); w.writerows(data)
+L = head.index("link"); ix = {k: i for i, k in enumerate(head)}
+write("google_feed_marketplace.tsv", head, [r[:L] + [utm(r[L], "google")] + r[L+1:] for r in rows])
+write("bing_feed_marketplace.tsv", head, [r[:L] + [utm(r[L], "bing")] + r[L+1:] for r in rows])
+# Pinterest: every daily ingestion 11.-23.11. failed (Error 1008) on the 12 products with video_link and stalled the rest
+# -> Pinterest feed has NO video_link; main image = our re-encoded JPEG (not the Google-hosted Product Studio scene,
+# not the big mislabeled PNGs from files.printara.co); no shipping/identifier columns (digital download).
+P_HEAD = ["id","title","description","link","image_link","price","availability","condition","brand","google_product_category","product_type","custom_label_0","custom_label_1","adult"]
+write("pinterest_feed_marketplace.tsv", P_HEAD, [[r[0], r[ix["title"]][:500], r[ix["description"]][:10000], utm(r[L], "pinterest"),
+       main_jpg.get(r[0], r[ix["image_link"]]), r[ix["price"]], "in stock", "new", "Printara", r[ix["google_product_category"]],
+       r[ix["product_type"]], r[ix["custom_label_0"]], r[ix["custom_label_1"]], "no"] for r in rows])
 with open(os.path.join(OUT, "marketplace_skipped.json"), "w", encoding="utf-8") as f: json.dump(bad, f, ensure_ascii=False, indent=1)
 from collections import Counter
 print("urls", len(urls), "| feed rows", len(rows), "| skipped", Counter(b[0] for b in bad))

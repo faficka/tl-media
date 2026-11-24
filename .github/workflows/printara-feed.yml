@@ -32,5 +32,5 @@ jobs:
           git add -A .
           git diff --cached --quiet || (git commit -m "printara feed images $(date -u +%F)" && git push)
       - run: |
-          git add printara/feed/google_feed_marketplace.tsv
+          git add printara/feed/google_feed_marketplace.tsv printara/feed/bing_feed_marketplace.tsv printara/feed/pinterest_feed_marketplace.tsv
           git diff --cached --quiet || (git commit -m "printara feed $(date -u +%F)" && git pull --rebase && git push)
