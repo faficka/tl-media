@@ -193,7 +193,10 @@ def write(name, hdr, data):
         w = csv.writer(f, delimiter="\t"); w.writerow(hdr); w.writerows(data)
 L = head.index("link"); ix = {k: i for i, k in enumerate(head)}
 write("google_feed_marketplace.tsv", head, [r[:L] + [utm(r[L], "google")] + r[L+1:] for r in rows])
-write("bing_feed_marketplace.tsv", head, [r[:L] + [utm(r[L], "bing")] + r[L+1:] for r in rows])
+# Microsoft warns about product_highlight (unknown) and video_link (not in spec) -> drop them for Bing.
+B_KEEP = [i for i, k in enumerate(head) if k not in ("product_highlight", "video_link")]
+write("bing_feed_marketplace.tsv", [head[i] for i in B_KEEP],
+      [[(utm(r[i], "bing") if i == L else r[i]) for i in B_KEEP] for r in rows])
 # Pinterest: every daily ingestion 11.-23.11. failed (Error 1008) on the 12 products with video_link and stalled the rest
 # -> Pinterest feed has NO video_link; main image = our re-encoded JPEG (not the Google-hosted Product Studio scene,
 # not the big mislabeled PNGs from files.printara.co); no shipping/identifier columns (digital download).
